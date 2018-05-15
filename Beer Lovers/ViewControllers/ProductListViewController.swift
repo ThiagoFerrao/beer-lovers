@@ -44,11 +44,33 @@ extension ProductListViewController: ProductListViewInterface {
 
 extension ProductListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        switch collectionView {
+        case categoriesCollectionView:
+            return productsCategories.count
+            
+        case productsCollectionView:
+            return 0
+            
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        switch collectionView {
+        case categoriesCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.CATEGORY_CELL, for: indexPath) as! CategoryCell
+            cell.productCategory = productsCategories[indexPath.row]
+            
+            return cell
+            
+        case productsCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.PRODUCT_CELL, for: indexPath) as! ProductCell
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
     }
 }
 

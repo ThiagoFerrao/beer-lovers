@@ -12,4 +12,9 @@ class CategoryCell: UICollectionViewCell {
     @IBOutlet weak var categoryLabel    : UILabel!
     @IBOutlet weak var divider          : UIView!
     
+    var productCategory: AllCategoriesSearchQuery.Data.AllCategory? {
+        didSet {
+            categoryLabel.text = productCategory?.title
+        }
+    }
 }
