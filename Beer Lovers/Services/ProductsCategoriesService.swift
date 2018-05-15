@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ProductsCategoriesService : NSObject {
+class ProductsCategoriesService: BaseService {
     
     static let shared = ProductsCategoriesService()
     
-    func getAllProductsCategories() {
+    func getAllProductsCategories(success: @escaping ([AllCategoriesSearchQuery.Data.AllCategory?]) -> Void, failure: @escaping FAILURE_HANDLER) {
         
         let ProductsCategoriesQuery = AllCategoriesSearchQuery()
         
@@ -20,12 +20,11 @@ class ProductsCategoriesService : NSObject {
             result, error in
             
             guard let result = result?.data?.allCategory else {
-                print("Error")
+                failure(error)
                 return
             }
             
-            print(result)
-            return
+            success(result)
         }
     }
 }

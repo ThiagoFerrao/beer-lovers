@@ -14,6 +14,7 @@
 		AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */; };
 		AF3F77B920AAE1A400EF5EE9 /* PointOfContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */; };
 		AF3F77BD20AAE4B900EF5EE9 /* ProductsCategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */; };
+		AF3F77BF20AAE97100EF5EE9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77BE20AAE97100EF5EE9 /* BaseService.swift */; };
 		AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7C20AA639A0024B39C /* AppDelegate.swift */; };
 		AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7E20AA639A0024B39C /* HomeViewController.swift */; };
 		AF488B8220AA639A0024B39C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8020AA639A0024B39C /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfContactService.swift; sourceTree = "<group>"; };
 		AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCategoriesService.swift; sourceTree = "<group>"; };
+		AF3F77BE20AAE97100EF5EE9 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		AF488B7920AA639A0024B39C /* Beer Lovers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Lovers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B7C20AA639A0024B39C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF488B7E20AA639A0024B39C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		AF7FA86D20AAC04B007651F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF3F77BE20AAE97100EF5EE9 /* BaseService.swift */,
 				AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */,
 				AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */,
 			);
@@ -598,6 +601,7 @@
 				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,
 				AF7FA85520AA78D3007651F8 /* CellIdentifiers.swift in Sources */,
 				AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */,
+				AF3F77BF20AAE97100EF5EE9 /* BaseService.swift in Sources */,
 				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */,
