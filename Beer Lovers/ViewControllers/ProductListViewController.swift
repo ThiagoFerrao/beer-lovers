@@ -27,5 +27,27 @@ class ProductListViewController: UIViewController {
 // MARK: ProductListViewInterface
 
 extension ProductListViewController: ProductListViewInterface {
+    func setupViewCotrollerTitle(_ title: String) {
+        self.title = title
+    }
+}
+
+
+// MARK: UICollectionViewDataSource
+
+extension ProductListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+}
+
+
+// MARK: UICollectionViewDelegate
+
+extension ProductListViewController: UICollectionViewDelegate {
+
 }

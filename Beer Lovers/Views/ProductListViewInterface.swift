@@ -6,5 +6,5 @@
 //
 
 protocol ProductListViewInterface {
-    
+    func setupViewCotrollerTitle(_ title: String)
 }
