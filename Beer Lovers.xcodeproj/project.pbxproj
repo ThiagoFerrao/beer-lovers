@@ -11,6 +11,9 @@
 		A431571D214A66E0D43F9C1C /* Pods_Beer_Lovers_Beer_LoversTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */; };
 		AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3F77AF20AAD87D00EF5EE9 /* schema.json */; };
 		AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B120AAD88600EF5EE9 /* API.swift */; };
+		AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */; };
+		AF3F77B920AAE1A400EF5EE9 /* PointOfContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */; };
+		AF3F77BD20AAE4B900EF5EE9 /* ProductsCategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */; };
 		AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7C20AA639A0024B39C /* AppDelegate.swift */; };
 		AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7E20AA639A0024B39C /* HomeViewController.swift */; };
 		AF488B8220AA639A0024B39C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8020AA639A0024B39C /* Main.storyboard */; };
@@ -30,10 +33,10 @@
 		AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */; };
 		AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */; };
 		AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */; };
-		AF7FA87920AAD11C007651F8 /* POCSearchMethod.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */; };
+		AF7FA87920AAD11C007651F8 /* PointOfContactInfo.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA87820AAD11C007651F8 /* PointOfContactInfo.graphql */; };
 		AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA87A20AAD2B2007651F8 /* URLs.swift */; };
-		AF7FA88120AAD671007651F8 /* POCCategorySearch.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */; };
-		AF7FA88320AAD6E6007651F8 /* ALLCategoriesSearch.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */; };
+		AF7FA88120AAD671007651F8 /* PointOfContactProducts.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88020AAD671007651F8 /* PointOfContactProducts.graphql */; };
+		AF7FA88320AAD6E6007651F8 /* ProductsCategories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88220AAD6E6007651F8 /* ProductsCategories.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers_Beer_LoversTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3F77AF20AAD87D00EF5EE9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "Beer Lovers/schema.json"; sourceTree = SOURCE_ROOT; };
 		AF3F77B120AAD88600EF5EE9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Beer Lovers/API.swift"; sourceTree = SOURCE_ROOT; };
+		AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfContactService.swift; sourceTree = "<group>"; };
+		AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCategoriesService.swift; sourceTree = "<group>"; };
 		AF488B7920AA639A0024B39C /* Beer Lovers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Lovers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B7C20AA639A0024B39C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF488B7E20AA639A0024B39C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -86,10 +92,10 @@
 		AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorIO.swift; sourceTree = "<group>"; };
 		AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableTypeEnum.swift; sourceTree = "<group>"; };
-		AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = POCSearchMethod.graphql; sourceTree = "<group>"; };
+		AF7FA87820AAD11C007651F8 /* PointOfContactInfo.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PointOfContactInfo.graphql; sourceTree = "<group>"; };
 		AF7FA87A20AAD2B2007651F8 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
-		AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = POCCategorySearch.graphql; sourceTree = "<group>"; };
-		AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ALLCategoriesSearch.graphql; sourceTree = "<group>"; };
+		AF7FA88020AAD671007651F8 /* PointOfContactProducts.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PointOfContactProducts.graphql; sourceTree = "<group>"; };
+		AF7FA88220AAD6E6007651F8 /* ProductsCategories.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProductsCategories.graphql; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +146,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF3F77B320AADE4400EF5EE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AF488B7020AA639A0024B39C = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +190,7 @@
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA86D20AAC04B007651F8 /* Services */,
 				AF7FA87120AACD4B007651F8 /* GraphQL */,
+				AF3F77B320AADE4400EF5EE9 /* Utils */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
 				AF7FA86A20AAABE0007651F8 /* Enums */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
@@ -291,6 +306,8 @@
 		AF7FA86D20AAC04B007651F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF3F77B820AAE1A400EF5EE9 /* PointOfContactService.swift */,
+				AF3F77BC20AAE4B900EF5EE9 /* ProductsCategoriesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,9 +315,9 @@
 		AF7FA87120AACD4B007651F8 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */,
-				AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */,
-				AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */,
+				AF7FA87820AAD11C007651F8 /* PointOfContactInfo.graphql */,
+				AF7FA88020AAD671007651F8 /* PointOfContactProducts.graphql */,
+				AF7FA88220AAD6E6007651F8 /* ProductsCategories.graphql */,
 				AF3F77B120AAD88600EF5EE9 /* API.swift */,
 				AF3F77AF20AAD87D00EF5EE9 /* schema.json */,
 			);
@@ -419,10 +436,10 @@
 			files = (
 				AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */,
 				AF488B8720AA639A0024B39C /* LaunchScreen.storyboard in Resources */,
-				AF7FA87920AAD11C007651F8 /* POCSearchMethod.graphql in Resources */,
-				AF7FA88320AAD6E6007651F8 /* ALLCategoriesSearch.graphql in Resources */,
+				AF7FA87920AAD11C007651F8 /* PointOfContactInfo.graphql in Resources */,
+				AF7FA88320AAD6E6007651F8 /* ProductsCategories.graphql in Resources */,
 				AF488B8420AA639A0024B39C /* Assets.xcassets in Resources */,
-				AF7FA88120AAD671007651F8 /* POCCategorySearch.graphql in Resources */,
+				AF7FA88120AAD671007651F8 /* PointOfContactProducts.graphql in Resources */,
 				AF488B8220AA639A0024B39C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,7 +604,10 @@
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
+				AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */,
+				AF3F77BD20AAE4B900EF5EE9 /* ProductsCategoriesService.swift in Sources */,
 				AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */,
+				AF3F77B920AAE1A400EF5EE9 /* PointOfContactService.swift in Sources */,
 				AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
