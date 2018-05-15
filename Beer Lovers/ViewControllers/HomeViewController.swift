@@ -79,5 +79,6 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         eventHandler?.cellWasSelectedWithAddress(autocompleteResults[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
