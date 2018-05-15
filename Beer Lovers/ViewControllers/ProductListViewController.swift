@@ -61,6 +61,7 @@ extension ProductListViewController: UICollectionViewDataSource {
         case categoriesCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.CATEGORY_CELL, for: indexPath) as! CategoryCell
             cell.productCategory = productsCategories[indexPath.row]
+            cell.isLastCell = productsCategories.count == indexPath.row + 1
             
             return cell
             

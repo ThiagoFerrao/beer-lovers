@@ -17,4 +17,10 @@ class CategoryCell: UICollectionViewCell {
             categoryLabel.text = productCategory?.title
         }
     }
+    
+    var isLastCell: Bool? {
+        didSet {
+            divider.isHidden = isLastCell ?? false
+        }
+    }
 }
