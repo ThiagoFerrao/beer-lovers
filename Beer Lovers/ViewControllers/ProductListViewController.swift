@@ -12,8 +12,10 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView : UICollectionView!
     @IBOutlet weak var productsCollectionView   : UICollectionView!
     
-    var pointOfContact  : PocSearchMethodQuery.Data.PocSearch?
-    var eventHandler    : ProductListModuleInterface?
+    var pointOfContact      : PocSearchMethodQuery.Data.PocSearch?
+    var eventHandler        : ProductListModuleInterface?
+    
+    var productsCategories  = [AllCategoriesSearchQuery.Data.AllCategory?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,11 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController: ProductListViewInterface {
     func setupViewCotrollerTitle(_ title: String) {
         self.title = title
+    }
+    
+    func updatecategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
+        self.productsCategories = productsCategories
+        categoriesCollectionView.reloadData()
     }
 }
 

@@ -6,9 +6,10 @@
 //
 
 protocol ProductListInteractorInput {
-    
+    func fetchAllProductsCategories()
 }
 
 protocol ProductListInteractorOutput {
-    
+    func foundProductsCategories(_ productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?])
+    func errorWhileFetchingProductsCategories()
 }

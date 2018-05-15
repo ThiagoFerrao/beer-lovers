@@ -42,6 +42,8 @@ extension ProductListPresenter: ProductListModuleInterface {
     func viewDidLoadWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch?) {
         let fullAddress = getPointOfContactFullAddress(pocAddress: pointOfContact?.address)
         userInterface?.setupViewCotrollerTitle(fullAddress)
+        
+        interactorInput?.fetchAllProductsCategories()
     }
 }
 
@@ -49,5 +51,11 @@ extension ProductListPresenter: ProductListModuleInterface {
 // MARK: ProductListInteractorOutput
 
 extension ProductListPresenter: ProductListInteractorOutput {
+    func foundProductsCategories(_ productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
+        userInterface?.updatecategoriesCollectionView(productsCategories: productsCategories)
+    }
     
+    func errorWhileFetchingProductsCategories() {
+        // TODO
+    }
 }

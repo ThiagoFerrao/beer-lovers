@@ -22,5 +22,19 @@ class ProductListInteractor: NSObject {
 // MARK: ProductListInteractorInput
 
 extension ProductListInteractor: ProductListInteractorInput {
-    
+    func fetchAllProductsCategories() {
+        ProductsCategoriesService.shared.getAllProductsCategories(success: {
+            (results) in
+            
+            guard !results.isEmpty else {
+                self.interactorOutput?.errorWhileFetchingProductsCategories()
+                return
+            }
+            
+            self.interactorOutput?.foundProductsCategories(results)
+            
+        }) { (error) in
+            self.interactorOutput?.errorWhileFetchingProductsCategories()
+        }
+    }
 }
