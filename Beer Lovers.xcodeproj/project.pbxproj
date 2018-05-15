@@ -10,12 +10,14 @@
 		49E0ADCC87692EE97F4FE1C0 /* Pods_Beer_Lovers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548ADC696C1A90AAF72B4804 /* Pods_Beer_Lovers.framework */; };
 		A431571D214A66E0D43F9C1C /* Pods_Beer_Lovers_Beer_LoversTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */; };
 		AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7C20AA639A0024B39C /* AppDelegate.swift */; };
-		AF488B7F20AA639A0024B39C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7E20AA639A0024B39C /* ViewController.swift */; };
+		AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7E20AA639A0024B39C /* HomeViewController.swift */; };
 		AF488B8220AA639A0024B39C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8020AA639A0024B39C /* Main.storyboard */; };
 		AF488B8420AA639A0024B39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8320AA639A0024B39C /* Assets.xcassets */; };
 		AF488B8720AA639A0024B39C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8520AA639A0024B39C /* LaunchScreen.storyboard */; };
 		AF488B9220AA639B0024B39C /* Beer_LoversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B9120AA639B0024B39C /* Beer_LoversTests.swift */; };
 		AF488B9D20AA639B0024B39C /* Beer_LoversUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B9C20AA639B0024B39C /* Beer_LoversUITests.swift */; };
+		AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */; };
+		AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers_Beer_LoversTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B7920AA639A0024B39C /* Beer Lovers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Lovers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B7C20AA639A0024B39C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF488B7E20AA639A0024B39C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF488B7E20AA639A0024B39C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF488B8120AA639A0024B39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF488B8320AA639A0024B39C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF488B8620AA639A0024B39C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		AF488B9820AA639B0024B39C /* Beer LoversUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beer LoversUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B9C20AA639B0024B39C /* Beer_LoversUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer_LoversUITests.swift; sourceTree = "<group>"; };
 		AF488B9E20AA639B0024B39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +163,9 @@
 		AF7FA84A20AA6A51007651F8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF488B7E20AA639A0024B39C /* ViewController.swift */,
+				AF488B7E20AA639A0024B39C /* HomeViewController.swift */,
+				AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */,
+				AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -408,7 +414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF488B7F20AA639A0024B39C /* ViewController.swift in Sources */,
+				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
+				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
+				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
