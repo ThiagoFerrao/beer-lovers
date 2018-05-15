@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
 // MARK: HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
-    func setupSearchbar() {
-        
+    func setupSearchbarWithDelegate(_ searchBarDelegate: UISearchBarDelegate) {
+        searchBar.delegate =  searchBarDelegate
     }
 }
 

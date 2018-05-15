@@ -5,6 +5,7 @@
 //  Created by Thiago Ferrão on 14/05/18.
 //
 
+import UIKit
 import Foundation
 
 class HomePresenter: NSObject {
@@ -23,6 +24,15 @@ class HomePresenter: NSObject {
 
 extension HomePresenter: HomeModuleInterface {
     func viewDidLoad() {
-        userInterface?.setupSearchbar()
+        userInterface?.setupSearchbarWithDelegate(self)
+    }
+}
+
+
+// MARK: UISearchBarDelegate
+
+extension HomePresenter: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
 }

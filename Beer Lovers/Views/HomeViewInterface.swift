@@ -5,8 +5,8 @@
 //  Created by Thiago Ferrão on 14/05/18.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeViewInterface {
-    func setupSearchbar()
+    func setupSearchbarWithDelegate(_ searchBarDelegate: UISearchBarDelegate)
 }
