@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49E0ADCC87692EE97F4FE1C0 /* Pods_Beer_Lovers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548ADC696C1A90AAF72B4804 /* Pods_Beer_Lovers.framework */; };
 		A431571D214A66E0D43F9C1C /* Pods_Beer_Lovers_Beer_LoversTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */; };
+		AF033B0D20AB8B7600464059 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B0C20AB8B7600464059 /* CategoryCell.swift */; };
+		AF033B0F20AB8B8200464059 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B0E20AB8B8200464059 /* ProductCell.swift */; };
 		AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3F77AF20AAD87D00EF5EE9 /* schema.json */; };
 		AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B120AAD88600EF5EE9 /* API.swift */; };
 		AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */; };
@@ -63,6 +65,8 @@
 		548ADC696C1A90AAF72B4804 /* Pods_Beer_Lovers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853216AE6E2DA7856C473396 /* Pods-Beer Lovers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.release.xcconfig"; sourceTree = "<group>"; };
 		99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers_Beer_LoversTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF033B0C20AB8B7600464059 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		AF033B0E20AB8B8200464059 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		AF3F77AF20AAD87D00EF5EE9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "Beer Lovers/schema.json"; sourceTree = SOURCE_ROOT; };
 		AF3F77B120AAD88600EF5EE9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Beer Lovers/API.swift"; sourceTree = SOURCE_ROOT; };
 		AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				AF7FA85120AA773A007651F8 /* AddressResultCell.swift */,
+				AF033B0C20AB8B7600464059 /* CategoryCell.swift */,
+				AF033B0E20AB8B8200464059 /* ProductCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
+				AF033B0F20AB8B8200464059 /* ProductCell.swift in Sources */,
 				AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */,
 				AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */,
 				AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */,
@@ -610,6 +617,7 @@
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
 				AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */,
 				AF3F77BD20AAE4B900EF5EE9 /* ProductsCategoriesService.swift in Sources */,
+				AF033B0D20AB8B7600464059 /* CategoryCell.swift in Sources */,
 				AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */,
 				AF3F77B920AAE1A400EF5EE9 /* PointOfContactService.swift in Sources */,
 				AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */,
