@@ -11,12 +11,12 @@ class PointOfContactService: BaseService {
     
     static let shared = PointOfContactService()
     
-    func getNearestPointOfContactInfo(searchedLat: String, searchedLong: String
+    func getNearestPointOfContact(latitude: String, longitude: String
         , success: @escaping ([PocSearchMethodQuery.Data.PocSearch?]) -> Void
         , failure: @escaping FAILURE_HANDLER) {
         
         let currentDate = DateUtil.shared.getStringFromDate(date: Date())
-        let POCSearchQuery = PocSearchMethodQuery(now: currentDate, algorithm: "NEAREST", lat: searchedLat, long: searchedLong)
+        let POCSearchQuery = PocSearchMethodQuery(now: currentDate, algorithm: "NEAREST", lat: latitude, long: longitude)
         
         apollo?.fetch(query: POCSearchQuery) {
             

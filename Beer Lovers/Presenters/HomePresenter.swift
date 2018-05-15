@@ -52,24 +52,24 @@ extension HomePresenter: HomeInteractorOutput {
         userInterface?.updateTableVieWithAutocompleteResults(autocompleteResults)
     }
     
-    func foundAddressLagLong(_ tupleLatLong: (String, String), fullAddressText: String) {
-        userInterface?.presentProductListScreenWithLatLong(tupleLatLong, fullAddressText: fullAddressText)
-    }
-    
     func emptySearchValueWasPassed() {
         userInterface?.showEmptyResultsCell()
     }
     
     func errorWhileFetchingAutocompeteResults() {
-        userInterface?.showFetchingErrorCell()
+        userInterface?.showFetchingResultsErrorCell()
     }
     
-    func errorWhileFetchingLatLong() {
+    func errorWhileFetchingThePointOfContactInfo() {
         let alertController = UIAlertController(title: "And Error Occurred"
             , message: "Unable to get the location of the address selected.\nTry again later :("
             , preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
         userInterface?.showAlert(alertController)
+    }
+    
+    func foundPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?]) {
+        userInterface?.presentProductListScreenWithPointOfContact(pointOfContact)
     }
 }

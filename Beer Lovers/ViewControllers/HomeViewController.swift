@@ -32,12 +32,11 @@ class HomeViewController: UIViewController {
             print("[HomeViewController] Unknown segue identifier was triggered")
             return
         }
-        
-        let sender = sender as! ((String, String), String)
+
+        let pointOfContact = sender as! [PocSearchMethodQuery.Data.PocSearch?]
         let productListVC = segue.destination as! ProductListViewController
-        
-        productListVC.fullAddressText = sender.1
-        productListVC.tupleLatLong = sender.0
+
+        productListVC.pointOfContact = pointOfContact
     }
 }
 
@@ -55,17 +54,13 @@ extension HomeViewController: HomeViewInterface {
         tableView.reloadData()
     }
     
-    func presentProductListScreenWithLatLong(_ tupleLatLong: (String, String), fullAddressText: String) {
-        performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: (tupleLatLong, fullAddressText))
-    }
-    
     func showEmptyResultsCell() {
         self.autocompleteResults = [GMSAutocompletePrediction]()
         self.tableViewStatus = HomeTableTypeEnum.EMPTY
         tableView.reloadData()
     }
     
-    func showFetchingErrorCell() {
+    func showFetchingResultsErrorCell() {
         self.autocompleteResults = [GMSAutocompletePrediction]()
         self.tableViewStatus = HomeTableTypeEnum.ERROR
         tableView.reloadData()
@@ -73,6 +68,10 @@ extension HomeViewController: HomeViewInterface {
     
     func showAlert(_ alertController: UIAlertController) {
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentProductListScreenWithPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?]) {
+        performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: pointOfContact)
     }
 }
 

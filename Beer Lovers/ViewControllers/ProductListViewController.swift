@@ -9,12 +9,9 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
-    var fullAddressText : String?
-    var tupleLatLong    : (String, String)?
+    var pointOfContact  : [PocSearchMethodQuery.Data.PocSearch?]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = fullAddressText
     }
 }

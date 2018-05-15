@@ -14,8 +14,8 @@ protocol HomeInteractorInput {
 
 protocol HomeInteractorOutput {
     func foundAutocompeteResults(_ autocompleteResults: [GMSAutocompletePrediction])
-    func foundAddressLagLong(_ tupleLatLong: (String, String), fullAddressText: String)
     func emptySearchValueWasPassed()
     func errorWhileFetchingAutocompeteResults()
-    func errorWhileFetchingLatLong()
+    func errorWhileFetchingThePointOfContactInfo()
+    func foundPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?])
 }

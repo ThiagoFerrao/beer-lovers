@@ -23,6 +23,25 @@ class HomeInteractor: NSObject {
         
         self.interactorOutput = output
     }
+    
+    
+    // Mark: Private Methods
+    
+    func foundAddressLagLong(latitude: String, longitude: String) {
+        PointOfContactService.shared.getNearestPointOfContact(latitude: latitude, longitude: longitude, success: {
+            (result) in
+            
+            if result.isEmpty {
+                self.interactorOutput?.errorWhileFetchingThePointOfContactInfo()
+                return
+            }
+            
+            self.interactorOutput?.foundPointOfContact(result)
+            
+        }) { (error) in
+            self.interactorOutput?.errorWhileFetchingThePointOfContactInfo()
+        }
+    }
 }
 
 
@@ -56,7 +75,7 @@ extension HomeInteractor: HomeInteractorInput {
     
     func fetchLatLongFromAddress(_ address: GMSAutocompletePrediction) {
         guard let placeID = address.placeID else {
-            self.interactorOutput?.errorWhileFetchingLatLong()
+            self.interactorOutput?.errorWhileFetchingThePointOfContactInfo()
             return
         }
         
@@ -65,11 +84,11 @@ extension HomeInteractor: HomeInteractorInput {
             (result, error) in
             
             guard let result = result else {
-                self.interactorOutput?.errorWhileFetchingLatLong()
+                self.interactorOutput?.errorWhileFetchingThePointOfContactInfo()
                 return
             }
             
-            self.interactorOutput?.foundAddressLagLong((String(result.coordinate.latitude), String(result.coordinate.longitude)), fullAddressText: address.attributedFullText.string)
+            self.foundAddressLagLong(latitude: String(result.coordinate.latitude), longitude: String(result.coordinate.longitude))
         })
     }
 }

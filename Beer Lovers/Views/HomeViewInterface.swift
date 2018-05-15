@@ -11,8 +11,8 @@ import GooglePlaces
 protocol HomeViewInterface {
     func setupSearchbarWithDelegate(_ searchBarDelegate: UISearchBarDelegate)
     func updateTableVieWithAutocompleteResults(_ autocompleteResults: [GMSAutocompletePrediction])
-    func presentProductListScreenWithLatLong(_ tupleLatLong: (String, String), fullAddressText: String)
     func showEmptyResultsCell()
-    func showFetchingErrorCell()
+    func showFetchingResultsErrorCell()
     func showAlert(_ alertController: UIAlertController)
+    func presentProductListScreenWithPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?])
 }
