@@ -43,4 +43,24 @@ extension HomeInteractor: HomeInteractorInput {
             self.interactorOutput?.foundAutocompeteResults(results)
         })
     }
+    
+    func fetchLatLongFromAddress(_ address: GMSAutocompletePrediction) {
+        guard let placeID = address.placeID else {
+            print("[HomeInteractor] Unable the placeID from address")
+            return
+        }
+        
+        placesClient.lookUpPlaceID(placeID, callback: {
+            
+            (result, error) in
+            
+            guard let result = result else {
+                print("[HomeInteractor] An Error occurred in the fetchLagAndLongFromAddress method"
+                    + " - Error: \(error?.localizedDescription ?? "Unknown")")
+                return
+            }
+            
+            self.interactorOutput?.foundAddressLagLong((String(result.coordinate.latitude), String(result.coordinate.longitude)))
+        })
+    }
 }

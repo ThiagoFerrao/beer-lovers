@@ -28,6 +28,10 @@ extension HomePresenter: HomeModuleInterface {
     func viewDidLoad() {
         userInterface?.setupSearchbarWithDelegate(self)
     }
+    
+    func cellWasSelectedWithAddress(_ addressSelected: GMSAutocompletePrediction) {
+        interactorInput?.fetchLatLongFromAddress(addressSelected)
+    }
 }
 
 
@@ -45,5 +49,9 @@ extension HomePresenter: UISearchBarDelegate {
 extension HomePresenter: HomeInteractorOutput {
     func foundAutocompeteResults(_ autocompleteResults: [GMSAutocompletePrediction]) {
         userInterface?.updateTableVieWithAutocompleteResults(autocompleteResults)
+    }
+    
+    func foundAddressLagLong(_ tupleLatLong: (String, String)) {
+        print(tupleLatLong)
     }
 }

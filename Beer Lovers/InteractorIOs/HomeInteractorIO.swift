@@ -9,8 +9,10 @@ import GooglePlaces
 
 protocol HomeInteractorInput {
     func fetchAutocompleteAdressesBasedOnValue(_ value: String)
+    func fetchLatLongFromAddress(_ address: GMSAutocompletePrediction)
 }
 
 protocol HomeInteractorOutput {
     func foundAutocompeteResults(_ autocompleteResults: [GMSAutocompletePrediction])
+    func foundAddressLagLong(_ tupleLatLong: (String, String))
 }
