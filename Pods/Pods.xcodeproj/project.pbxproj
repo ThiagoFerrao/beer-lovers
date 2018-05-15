@@ -23,6 +23,7 @@
 		47698C69C4E59707385EACCCB4AB8BA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F29C7B6A4C12E0AFB0B1E8980D713E4 /* Pods-Beer Lovers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Beer Lovers.modulemap"; sourceTree = "<group>"; };
 		532DA9FFC82389DD30DA6B67DB007968 /* Pods-Beer Lovers-Beer LoversTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Beer Lovers-Beer LoversTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		653F849BC2732CB3078BF4AB439A19ED /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66385E1CE87DE65C4BD39AFD9397558E /* Pods_Beer_Lovers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Beer_Lovers.framework; path = "Pods-Beer Lovers.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC1399085941001FBB1280713B356CF /* Pods-Beer Lovers-Beer LoversTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Beer Lovers-Beer LoversTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -34,9 +35,11 @@
 		B2844F5EC01C584ECE7D52E82CC71B1D /* Pods-Beer Lovers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Beer Lovers-umbrella.h"; sourceTree = "<group>"; };
 		B319632432BE7E9B1F257774D870EE7F /* Pods-Beer Lovers-Beer LoversTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Beer Lovers-Beer LoversTests-dummy.m"; sourceTree = "<group>"; };
 		B434AB17A03C86563620D85DF655C0DB /* Pods-Beer Lovers-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Beer Lovers-resources.sh"; sourceTree = "<group>"; };
+		BBE4F111A38DA22556D2C6DCD60CD7BC /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		D0BF795CDFF367C2523B9208DF512D40 /* Pods-Beer Lovers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Beer Lovers-dummy.m"; sourceTree = "<group>"; };
 		D5126F23B03DDD0FFCAE0ABB1E2D4C93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE82FA45B042EAE8A884BA9A8D533F07 /* Pods-Beer Lovers-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Beer Lovers-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E97C0CFD6499FF4CF94E96F1124D1AC9 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		E9AAD3634D798B4DF667984EF006F93C /* Pods-Beer Lovers-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Beer Lovers-acknowledgements.plist"; sourceTree = "<group>"; };
 		F5EE70CABEF73AE2FBDB1A663421DF24 /* Pods-Beer Lovers-Beer LoversTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Beer Lovers-Beer LoversTests-resources.sh"; sourceTree = "<group>"; };
 		FFC162E022D75AB79061C233DEA89D59 /* Pods-Beer Lovers-Beer LoversTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Beer Lovers-Beer LoversTests.modulemap"; sourceTree = "<group>"; };
@@ -80,6 +83,23 @@
 			path = "Target Support Files/Pods-Beer Lovers-Beer LoversTests";
 			sourceTree = "<group>";
 		};
+		2BE4EFFE092A9DA7A925B1DF402E929B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D8F2A686DF2233D7DB9FF40571A826D6 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		5E72FE505486D66241C353F0B810A506 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				2BE4EFFE092A9DA7A925B1DF402E929B /* Base */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
 		6B976061E8DD2111154350DC507C61B6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +132,28 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FDAC1D5BBA8FDEF7E81533A38BCCCBEE /* Pods */,
 				B503C694C85F91096C9F39A31CB99F17 /* Products */,
 				6B976061E8DD2111154350DC507C61B6 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		82D72D0248F4FCC5BE15387C41E19075 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				FE48C5CAC8E42ECC8DC6F24FB12425EE /* Frameworks */,
+				8F65AED48186CC52021B01455C4C9894 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		8F65AED48186CC52021B01455C4C9894 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E97C0CFD6499FF4CF94E96F1124D1AC9 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B503C694C85F91096C9F39A31CB99F17 /* Products */ = {
@@ -140,6 +179,31 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8F2A686DF2233D7DB9FF40571A826D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBE4F111A38DA22556D2C6DCD60CD7BC /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDAC1D5BBA8FDEF7E81533A38BCCCBEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E72FE505486D66241C353F0B810A506 /* GoogleMaps */,
+				82D72D0248F4FCC5BE15387C41E19075 /* GooglePlaces */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE48C5CAC8E42ECC8DC6F24FB12425EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				653F849BC2732CB3078BF4AB439A19ED /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
