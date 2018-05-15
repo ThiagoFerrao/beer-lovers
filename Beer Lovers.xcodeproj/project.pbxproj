@@ -19,13 +19,14 @@
 		AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */; };
 		AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */; };
 		AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85120AA773A007651F8 /* AddressResultCell.swift */; };
-		AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */; };
+		AF7FA85520AA78D3007651F8 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85420AA78D3007651F8 /* CellIdentifiers.swift */; };
 		AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85620AA7E4A007651F8 /* APIKeys.swift */; };
 		AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85920AA81F4007651F8 /* HomePresenter.swift */; };
 		AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */; };
 		AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */; };
 		AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */; };
 		AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */; };
+		AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +68,14 @@
 		AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		AF7FA85120AA773A007651F8 /* AddressResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultCell.swift; sourceTree = "<group>"; };
-		AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifiers.swift; sourceTree = "<group>"; };
+		AF7FA85420AA78D3007651F8 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		AF7FA85620AA7E4A007651F8 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		AF7FA85920AA81F4007651F8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInterface.swift; sourceTree = "<group>"; };
 		AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleInterface.swift; sourceTree = "<group>"; };
 		AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorIO.swift; sourceTree = "<group>"; };
+		AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,8 +215,9 @@
 		AF7FA85320AA78BA007651F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */,
+				AF7FA85420AA78D3007651F8 /* CellIdentifiers.swift */,
 				AF7FA85620AA7E4A007651F8 /* APIKeys.swift */,
+				AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -505,7 +508,8 @@
 				AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */,
 				AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */,
 				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,
-				AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */,
+				AF7FA85520AA78D3007651F8 /* CellIdentifiers.swift in Sources */,
+				AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */,
 				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,

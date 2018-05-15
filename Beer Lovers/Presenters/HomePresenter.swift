@@ -52,6 +52,6 @@ extension HomePresenter: HomeInteractorOutput {
     }
     
     func foundAddressLagLong(_ tupleLatLong: (String, String)) {
-        print(tupleLatLong)
+        userInterface?.presentProductListScreenWithLatLong(tupleLatLong)
     }
 }

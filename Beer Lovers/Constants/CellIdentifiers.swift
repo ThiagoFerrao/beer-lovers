@@ -1,13 +1,13 @@
 //
-//  CellsIdentifiers.swift
+//  CellIdentifiers.swift
 //  Beer Lovers
 //
 //  Created by Thiago Ferrão on 14/05/18.
 //
 
-struct CELLS_IDENTIFIERS {
+struct CELL_IDENTIFIERS {
     
-    struct HOME_VIEW_CONTROLLER {
+    struct HOME {
         static let ADDRESS_RESULT_CELL = "AddressResultCell"
     }
 }
