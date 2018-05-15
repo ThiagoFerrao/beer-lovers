@@ -78,5 +78,5 @@ extension ProductListViewController: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegate
 
 extension ProductListViewController: UICollectionViewDelegate {
-
+    
 }
