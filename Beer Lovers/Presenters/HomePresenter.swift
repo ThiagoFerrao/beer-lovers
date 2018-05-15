@@ -69,7 +69,7 @@ extension HomePresenter: HomeInteractorOutput {
         userInterface?.showAlert(alertController)
     }
     
-    func foundPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?]) {
+    func foundPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch) {
         userInterface?.presentProductListScreenWithPointOfContact(pointOfContact)
     }
 }

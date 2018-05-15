@@ -17,5 +17,5 @@ protocol HomeInteractorOutput {
     func emptySearchValueWasPassed()
     func errorWhileFetchingAutocompeteResults()
     func errorWhileFetchingThePointOfContactInfo()
-    func foundPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?])
+    func foundPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch)
 }

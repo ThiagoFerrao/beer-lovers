@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
             return
         }
 
-        let pointOfContact = sender as! [PocSearchMethodQuery.Data.PocSearch?]
+        let pointOfContact = sender as! PocSearchMethodQuery.Data.PocSearch
         let productListVC = segue.destination as! ProductListViewController
 
         productListVC.pointOfContact = pointOfContact
@@ -70,7 +70,7 @@ extension HomeViewController: HomeViewInterface {
         present(alertController, animated: true, completion: nil)
     }
     
-    func presentProductListScreenWithPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?]) {
+    func presentProductListScreenWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch) {
         performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: pointOfContact)
     }
 }

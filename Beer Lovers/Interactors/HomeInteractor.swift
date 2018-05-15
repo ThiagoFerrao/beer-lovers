@@ -29,9 +29,9 @@ class HomeInteractor: NSObject {
     
     func foundAddressLagLong(latitude: String, longitude: String) {
         PointOfContactService.shared.getNearestPointOfContact(latitude: latitude, longitude: longitude, success: {
-            (result) in
+            (results) in
             
-            if result.isEmpty {
+            guard !results.isEmpty, let result = results[0] else {
                 self.interactorOutput?.errorWhileFetchingThePointOfContactInfo()
                 return
             }

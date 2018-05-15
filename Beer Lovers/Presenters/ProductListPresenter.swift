@@ -24,7 +24,9 @@ class ProductListPresenter: NSObject {
 // MARK: ProductListModuleInterface
 
 extension ProductListPresenter: ProductListModuleInterface {
-    
+    func viewDidLoadWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch?) {
+        
+    }
 }
 
 

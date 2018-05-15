@@ -14,5 +14,5 @@ protocol HomeViewInterface {
     func showEmptyResultsCell()
     func showFetchingResultsErrorCell()
     func showAlert(_ alertController: UIAlertController)
-    func presentProductListScreenWithPointOfContact(_ pointOfContact: [PocSearchMethodQuery.Data.PocSearch?])
+    func presentProductListScreenWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch)
 }
