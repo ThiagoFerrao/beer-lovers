@@ -130,10 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				AF488B7C20AA639A0024B39C /* AppDelegate.swift */,
-				AF488B7E20AA639A0024B39C /* ViewController.swift */,
-				AF488B8020AA639A0024B39C /* Main.storyboard */,
+				AF7FA84A20AA6A51007651F8 /* ViewControllers */,
+				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
-				AF488B8520AA639A0024B39C /* LaunchScreen.storyboard */,
 				AF488B8820AA639A0024B39C /* Info.plist */,
 			);
 			path = "Beer Lovers";
@@ -155,6 +154,23 @@
 				AF488B9E20AA639B0024B39C /* Info.plist */,
 			);
 			path = "Beer LoversUITests";
+			sourceTree = "<group>";
+		};
+		AF7FA84A20AA6A51007651F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF488B7E20AA639A0024B39C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AF7FA84B20AA6A6D007651F8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF488B8520AA639A0024B39C /* LaunchScreen.storyboard */,
+				AF488B8020AA639A0024B39C /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,7 +587,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -588,7 +607,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,7 +626,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -621,7 +647,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -636,7 +666,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -651,7 +685,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
