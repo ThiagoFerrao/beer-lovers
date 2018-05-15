@@ -16,6 +16,7 @@
 		AF033B1520AB8EBD00464059 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1420AB8EBD00464059 /* ProductListPresenter.swift */; };
 		AF033B1720AB8F1000464059 /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1620AB8F1000464059 /* ProductListInteractorIO.swift */; };
 		AF033B1920AB8F3F00464059 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1820AB8F3F00464059 /* ProductListInteractor.swift */; };
+		AF033B1B20ABA75400464059 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1A20ABA75400464059 /* Colors.swift */; };
 		AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3F77AF20AAD87D00EF5EE9 /* schema.json */; };
 		AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B120AAD88600EF5EE9 /* API.swift */; };
 		AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */; };
@@ -77,6 +78,7 @@
 		AF033B1420AB8EBD00464059 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
 		AF033B1620AB8F1000464059 /* ProductListInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractorIO.swift; sourceTree = "<group>"; };
 		AF033B1820AB8F3F00464059 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		AF033B1A20ABA75400464059 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AF3F77AF20AAD87D00EF5EE9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "Beer Lovers/schema.json"; sourceTree = SOURCE_ROOT; };
 		AF3F77B120AAD88600EF5EE9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Beer Lovers/API.swift"; sourceTree = SOURCE_ROOT; };
 		AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				AF7FA85620AA7E4A007651F8 /* APIKeys.swift */,
 				AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */,
 				AF7FA87A20AAD2B2007651F8 /* URLs.swift */,
+				AF033B1A20ABA75400464059 /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF033B1720AB8F1000464059 /* ProductListInteractorIO.swift in Sources */,
+				AF033B1B20ABA75400464059 /* Colors.swift in Sources */,
 				AF033B1120AB8E7C00464059 /* ProductListViewInterface.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
 				AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */,
