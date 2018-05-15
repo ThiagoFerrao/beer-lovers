@@ -6,5 +6,5 @@
 //
 
 struct URLS {
-    static let GRAPHQL_API = "https://803votn6w7.execute-api.us-west-2.amazonaws.com/dev/public/graphql"
+    static let GRAPHQL_API  = "https://803votn6w7.execute-api.us-west-2.amazonaws.com/dev/public/graphql"
 }

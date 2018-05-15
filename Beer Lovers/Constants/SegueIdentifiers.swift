@@ -8,10 +8,10 @@
 struct SEGUE_IDENTIFIERS {
     
     struct HOME {
-        static let TO_PRODUCT_LIST = "SegueToProdutListVC"
+        static let TO_PRODUCT_LIST      = "SegueToProdutListVC"
     }
     
     struct PRODUCT {
-        static let TO_PRODUCT_DETAIL = "SegueToProductDetailVC"
+        static let TO_PRODUCT_DETAIL    = "SegueToProductDetailVC"
     }
 }

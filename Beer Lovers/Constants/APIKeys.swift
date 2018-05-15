@@ -8,6 +8,6 @@
 struct API_KEYS {
     
     struct GOOGLE_PLACES {
-        static let KEY = "AIzaSyDrWnrRjX6kaK0Uiiy387RPsabFAIcBues"
+        static let KEY  = "AIzaSyDrWnrRjX6kaK0Uiiy387RPsabFAIcBues"
     }
 }
