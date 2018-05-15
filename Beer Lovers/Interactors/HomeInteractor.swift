@@ -32,7 +32,7 @@ extension HomeInteractor: HomeInteractorInput {
     func fetchAutocompleteAdressesBasedOnValue(_ value: String) {
         
         guard (value != "") else {
-            self.interactorOutput?.foundAutocompeteResults([GMSAutocompletePrediction]())
+            self.interactorOutput?.emptySearchValueWasPassed()
             return
         }
         
@@ -41,8 +41,12 @@ extension HomeInteractor: HomeInteractorInput {
             (results, error) -> Void in
             
             guard let results = results else {
-                print("[HomeInteractor] An Error occurred in the fetchAutocompleteAdressesBasedOnValue method"
-                    + " - Error: \(error?.localizedDescription ?? "Unknown")")
+                self.interactorOutput?.errorWhileFetchingAutocompeteResults()
+                return
+            }
+            
+            guard !results.isEmpty else {
+                self.interactorOutput?.errorWhileFetchingAutocompeteResults()
                 return
             }
             

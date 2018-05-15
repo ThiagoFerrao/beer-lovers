@@ -47,11 +47,20 @@ extension HomePresenter: UISearchBarDelegate {
 // MARK: HomeInteractorOutput
 
 extension HomePresenter: HomeInteractorOutput {
+    
     func foundAutocompeteResults(_ autocompleteResults: [GMSAutocompletePrediction]) {
         userInterface?.updateTableVieWithAutocompleteResults(autocompleteResults)
     }
     
     func foundAddressLagLong(_ tupleLatLong: (String, String)) {
         userInterface?.presentProductListScreenWithLatLong(tupleLatLong)
+    }
+    
+    func emptySearchValueWasPassed() {
+        userInterface?.showEmptyResultsCell()
+    }
+    
+    func errorWhileFetchingAutocompeteResults() {
+        userInterface?.showFetchingErrorCell()
     }
 }

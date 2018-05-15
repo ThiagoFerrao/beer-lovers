@@ -27,6 +27,7 @@
 		AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */; };
 		AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */; };
 		AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */; };
+		AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorIO.swift; sourceTree = "<group>"; };
 		AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
+		AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableTypeEnum.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				AF7FA85020AA76F4007651F8 /* Cells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
+				AF7FA86A20AAABE0007651F8 /* Enums */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
 				AF488B8820AA639A0024B39C /* Info.plist */,
 			);
@@ -260,6 +263,14 @@
 				AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */,
 			);
 			path = InteractorIOs;
+			sourceTree = "<group>";
+		};
+		AF7FA86A20AAABE0007651F8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +516,7 @@
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
 				AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */,
+				AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */,
 				AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */,
 				AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */,
 				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,

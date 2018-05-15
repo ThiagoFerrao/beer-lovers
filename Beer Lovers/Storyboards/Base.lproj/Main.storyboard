@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter the delivery address" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-RO-SF2">
-                                <rect key="frame" x="8" y="151" width="343" height="56"/>
+                                <rect key="frame" x="8" y="151" width="359" height="56"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -92,6 +92,48 @@
                                             <outlet property="cityResultLabel" destination="Nfs-UX-N4Q" id="cV9-Pl-IzR"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorResultCell" id="xdS-B5-UbL">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdS-B5-UbL" id="CTe-Ia-pg2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to Find Location :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxg-j1-asx">
+                                                    <rect key="frame" x="16" y="13" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qxg-j1-asx" secondAttribute="trailing" constant="16" id="ElO-uc-eaV"/>
+                                                <constraint firstItem="Qxg-j1-asx" firstAttribute="leading" secondItem="CTe-Ia-pg2" secondAttribute="leading" constant="16" id="Sjt-VM-KnX"/>
+                                                <constraint firstItem="Qxg-j1-asx" firstAttribute="centerY" secondItem="CTe-Ia-pg2" secondAttribute="centerY" id="rky-3t-4Fa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyResultCell" id="N6Z-e7-Kf5">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N6Z-e7-Kf5" id="pGF-gi-W13">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Always Waiting For Your Search :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-E7-obe">
+                                                    <rect key="frame" x="16" y="12" width="343" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8o2-E7-obe" firstAttribute="leading" secondItem="pGF-gi-W13" secondAttribute="leading" constant="16" id="YFX-If-JFb"/>
+                                                <constraint firstItem="8o2-E7-obe" firstAttribute="centerY" secondItem="pGF-gi-W13" secondAttribute="centerY" id="cGx-Hz-SHq"/>
+                                                <constraint firstAttribute="trailing" secondItem="8o2-E7-obe" secondAttribute="trailing" constant="16" id="nU4-ji-MLr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Xd4-8g-PmC"/>
@@ -110,7 +152,7 @@
                             <constraint firstItem="PRI-0s-EpE" firstAttribute="top" secondItem="KNK-RO-SF2" secondAttribute="bottom" id="T8R-GW-Swd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PRI-0s-EpE" secondAttribute="trailing" id="fSe-OM-QAU"/>
                             <constraint firstItem="KNK-RO-SF2" firstAttribute="top" secondItem="5am-Rp-AKc" secondAttribute="bottom" constant="32" id="gtH-ca-SOk"/>
-                            <constraint firstItem="KNK-RO-SF2" firstAttribute="trailing" secondItem="5am-Rp-AKc" secondAttribute="trailing" constant="-8" id="pB7-uc-hbS"/>
+                            <constraint firstItem="KNK-RO-SF2" firstAttribute="trailing" secondItem="5am-Rp-AKc" secondAttribute="trailing" constant="8" id="pB7-uc-hbS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHW-kO-GPP" secondAttribute="trailing" constant="16" id="qET-c2-cGH"/>
                             <constraint firstItem="gHW-kO-GPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wSf-tx-Ecv"/>
                             <constraint firstItem="gHW-kO-GPP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="yez-zU-ufq"/>
