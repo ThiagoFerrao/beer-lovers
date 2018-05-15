@@ -37,24 +37,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-kO-GPP">
-                                <rect key="frame" x="16" y="32" width="343" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <rect key="frame" x="16" y="32" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will use your address to find the fastest delivery option available in your area." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5am-Rp-AKc">
-                                <rect key="frame" x="16" y="84" width="343" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="16" y="81.5" width="343" height="37.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter the delivery address" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-RO-SF2">
-                                <rect key="frame" x="8" y="156" width="343" height="56"/>
+                                <rect key="frame" x="8" y="151" width="343" height="56"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-0s-EpE">
-                                <rect key="frame" x="0.0" y="212" width="375" height="391"/>
+                                <rect key="frame" x="0.0" y="207" width="375" height="396"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressResultCell" id="igH-2i-Ox9" customClass="AddressResultCell" customModule="Beer_Lovers" customModuleProvider="target">
@@ -64,9 +64,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_location" translatesAutoresizingMaskIntoConstraints="NO" id="Gcj-HU-tgE">
+                                                    <rect key="frame" x="16" y="12" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="2sd-bw-REw"/>
+                                                        <constraint firstAttribute="height" constant="20" id="xUL-Ym-ony"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-UX-N4Q">
-                                                    <rect key="frame" x="32" y="12.5" width="311" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <rect key="frame" x="41" y="13.5" width="302" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -74,7 +81,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Nfs-UX-N4Q" secondAttribute="trailing" constant="32" id="Bl5-ET-EK2"/>
-                                                <constraint firstItem="Nfs-UX-N4Q" firstAttribute="leading" secondItem="zvF-CS-hZy" secondAttribute="leading" constant="32" id="MVX-ft-Bva"/>
+                                                <constraint firstItem="Gcj-HU-tgE" firstAttribute="centerY" secondItem="zvF-CS-hZy" secondAttribute="centerY" id="RgJ-Ue-MXC"/>
+                                                <constraint firstItem="Nfs-UX-N4Q" firstAttribute="leading" secondItem="Gcj-HU-tgE" secondAttribute="trailing" constant="5" id="XwN-xA-xT9"/>
+                                                <constraint firstItem="Gcj-HU-tgE" firstAttribute="leading" secondItem="zvF-CS-hZy" secondAttribute="leading" constant="16" id="egO-kD-ME2"/>
                                                 <constraint firstItem="Nfs-UX-N4Q" firstAttribute="centerY" secondItem="zvF-CS-hZy" secondAttribute="centerY" id="fqf-Fa-7Jt"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -153,4 +162,7 @@
             <point key="canvasLocation" x="932" y="6"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_location" width="24" height="24"/>
+    </resources>
 </document>
