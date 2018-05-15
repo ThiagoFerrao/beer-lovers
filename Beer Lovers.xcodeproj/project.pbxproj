@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49E0ADCC87692EE97F4FE1C0 /* Pods_Beer_Lovers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548ADC696C1A90AAF72B4804 /* Pods_Beer_Lovers.framework */; };
 		A431571D214A66E0D43F9C1C /* Pods_Beer_Lovers_Beer_LoversTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */; };
+		AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3F77AF20AAD87D00EF5EE9 /* schema.json */; };
+		AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B120AAD88600EF5EE9 /* API.swift */; };
 		AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7C20AA639A0024B39C /* AppDelegate.swift */; };
 		AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B7E20AA639A0024B39C /* HomeViewController.swift */; };
 		AF488B8220AA639A0024B39C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF488B8020AA639A0024B39C /* Main.storyboard */; };
@@ -28,6 +30,10 @@
 		AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */; };
 		AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */; };
 		AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */; };
+		AF7FA87920AAD11C007651F8 /* POCSearchMethod.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */; };
+		AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA87A20AAD2B2007651F8 /* URLs.swift */; };
+		AF7FA88120AAD671007651F8 /* POCCategorySearch.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */; };
+		AF7FA88320AAD6E6007651F8 /* ALLCategoriesSearch.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,8 @@
 		548ADC696C1A90AAF72B4804 /* Pods_Beer_Lovers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		853216AE6E2DA7856C473396 /* Pods-Beer Lovers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.release.xcconfig"; sourceTree = "<group>"; };
 		99A9F763AEB7F4F1BDE43B29 /* Pods_Beer_Lovers_Beer_LoversTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Lovers_Beer_LoversTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3F77AF20AAD87D00EF5EE9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "Beer Lovers/schema.json"; sourceTree = SOURCE_ROOT; };
+		AF3F77B120AAD88600EF5EE9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Beer Lovers/API.swift"; sourceTree = SOURCE_ROOT; };
 		AF488B7920AA639A0024B39C /* Beer Lovers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Lovers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF488B7C20AA639A0024B39C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF488B7E20AA639A0024B39C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,10 @@
 		AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorIO.swift; sourceTree = "<group>"; };
 		AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		AF7FA86B20AAABFA007651F8 /* HomeTableTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableTypeEnum.swift; sourceTree = "<group>"; };
+		AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = POCSearchMethod.graphql; sourceTree = "<group>"; };
+		AF7FA87A20AAD2B2007651F8 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = POCCategorySearch.graphql; sourceTree = "<group>"; };
+		AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ALLCategoriesSearch.graphql; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +175,7 @@
 				AF7FA85020AA76F4007651F8 /* Cells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA86D20AAC04B007651F8 /* Services */,
+				AF7FA87120AACD4B007651F8 /* GraphQL */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
 				AF7FA86A20AAABE0007651F8 /* Enums */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
@@ -222,6 +235,7 @@
 				AF7FA85420AA78D3007651F8 /* CellIdentifiers.swift */,
 				AF7FA85620AA7E4A007651F8 /* APIKeys.swift */,
 				AF7FA86820AA9F79007651F8 /* SegueIdentifiers.swift */,
+				AF7FA87A20AAD2B2007651F8 /* URLs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -281,6 +295,18 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		AF7FA87120AACD4B007651F8 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA87820AAD11C007651F8 /* POCSearchMethod.graphql */,
+				AF7FA88220AAD6E6007651F8 /* ALLCategoriesSearch.graphql */,
+				AF7FA88020AAD671007651F8 /* POCCategorySearch.graphql */,
+				AF3F77B120AAD88600EF5EE9 /* API.swift */,
+				AF3F77AF20AAD87D00EF5EE9 /* schema.json */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +315,7 @@
 			buildConfigurationList = AF488BA120AA639B0024B39C /* Build configuration list for PBXNativeTarget "Beer Lovers" */;
 			buildPhases = (
 				15E0EEF490ADBABE99C04F75 /* [CP] Check Pods Manifest.lock */,
+				AF7FA86E20AAC40E007651F8 /* Generate Apollo GraphQL API */,
 				AF488B7520AA639A0024B39C /* Sources */,
 				AF488B7620AA639A0024B39C /* Frameworks */,
 				AF488B7720AA639A0024B39C /* Resources */,
@@ -390,8 +417,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */,
 				AF488B8720AA639A0024B39C /* LaunchScreen.storyboard in Resources */,
+				AF7FA87920AAD11C007651F8 /* POCSearchMethod.graphql in Resources */,
+				AF7FA88320AAD6E6007651F8 /* ALLCategoriesSearch.graphql in Resources */,
 				AF488B8420AA639A0024B39C /* Assets.xcassets in Resources */,
+				AF7FA88120AAD671007651F8 /* POCCategorySearch.graphql in Resources */,
 				AF488B8220AA639A0024B39C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +516,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF7FA86E20AAC40E007651F8 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
 		BAA425EBB7887E7BB70F8CAB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,9 +583,11 @@
 				AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */,
 				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
+				AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
+				AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */,
 				AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,7 +766,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -736,7 +786,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -752,7 +805,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -769,7 +826,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -784,7 +845,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,7 +864,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -7,6 +7,7 @@
 
 import UIKit
 import GooglePlaces
+import Apollo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setupGooglePlacesAPI()
+        setupApollo()
         
         return true
     }
@@ -25,5 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupGooglePlacesAPI() {
         GMSPlacesClient.provideAPIKey(API_KEYS.GOOGLE_PLACES.KEY)
+    }
+    
+    private func setupApollo() {
+        let graphlQLEndpoint = URLS.GRAPHQL_API
+        guard let graphlQLEndpointURL = URL(string: graphlQLEndpoint) else {
+            return
+        }
+        
+        let apollo = ApolloClient(url: graphlQLEndpointURL)
     }
 }
