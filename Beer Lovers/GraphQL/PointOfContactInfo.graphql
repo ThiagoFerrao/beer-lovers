@@ -6,33 +6,6 @@ id
 status
 tradingName
 officialName
-deliveryTypes {
-__typename
-pocDeliveryTypeId
-deliveryTypeId
-price
-title
-subtitle
-active
-}
-paymentMethods {
-__typename
-pocPaymentMethodId
-paymentMethodId
-active
-title
-subtitle
-}
-pocWorkDay {
-__typename
-weekDay
-active
-workingInterval {
-__typename
-openingTime
-closingTime
-}
-}
 address {
 __typename
 address1
@@ -42,10 +15,6 @@ city
 province
 zip
 coordinates
-}
-phone {
-__typename
-phoneNumber
 }
 }
 }

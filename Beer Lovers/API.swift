@@ -37,7 +37,7 @@ public enum Status: RawRepresentable, Equatable, Apollo.JSONDecodable, Apollo.JS
 
 public final class PocSearchMethodQuery: GraphQLQuery {
   public static let operationString =
-    "query pocSearchMethod($now: DateTime!, $algorithm: String!, $lat: String!, $long: String!) {\n  pocSearch(now: $now, algorithm: $algorithm, lat: $lat, long: $long) {\n    __typename\n    id\n    status\n    tradingName\n    officialName\n    deliveryTypes {\n      __typename\n      pocDeliveryTypeId\n      deliveryTypeId\n      price\n      title\n      subtitle\n      active\n    }\n    paymentMethods {\n      __typename\n      pocPaymentMethodId\n      paymentMethodId\n      active\n      title\n      subtitle\n    }\n    pocWorkDay {\n      __typename\n      weekDay\n      active\n      workingInterval {\n        __typename\n        openingTime\n        closingTime\n      }\n    }\n    address {\n      __typename\n      address1\n      address2\n      number\n      city\n      province\n      zip\n      coordinates\n    }\n    phone {\n      __typename\n      phoneNumber\n    }\n  }\n}"
+    "query pocSearchMethod($now: DateTime!, $algorithm: String!, $lat: String!, $long: String!) {\n  pocSearch(now: $now, algorithm: $algorithm, lat: $lat, long: $long) {\n    __typename\n    id\n    status\n    tradingName\n    officialName\n    address {\n      __typename\n      address1\n      address2\n      number\n      city\n      province\n      zip\n      coordinates\n    }\n  }\n}"
 
   public var now: String
   public var algorithm: String
@@ -90,11 +90,7 @@ public final class PocSearchMethodQuery: GraphQLQuery {
         GraphQLField("status", type: .nonNull(.scalar(Status.self))),
         GraphQLField("tradingName", type: .scalar(String.self)),
         GraphQLField("officialName", type: .scalar(String.self)),
-        GraphQLField("deliveryTypes", type: .list(.object(DeliveryType.selections))),
-        GraphQLField("paymentMethods", type: .list(.object(PaymentMethod.selections))),
-        GraphQLField("pocWorkDay", type: .list(.object(PocWorkDay.selections))),
         GraphQLField("address", type: .object(Address.selections)),
-        GraphQLField("phone", type: .object(Phone.selections)),
       ]
 
       public var snapshot: Snapshot
@@ -103,8 +99,8 @@ public final class PocSearchMethodQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID? = nil, status: Status, tradingName: String? = nil, officialName: String? = nil, deliveryTypes: [DeliveryType?]? = nil, paymentMethods: [PaymentMethod?]? = nil, pocWorkDay: [PocWorkDay?]? = nil, address: Address? = nil, phone: Phone? = nil) {
-        self.init(snapshot: ["__typename": "POC", "id": id, "status": status, "tradingName": tradingName, "officialName": officialName, "deliveryTypes": deliveryTypes.flatMap { (value: [DeliveryType?]) -> [Snapshot?] in value.map { (value: DeliveryType?) -> Snapshot? in value.flatMap { (value: DeliveryType) -> Snapshot in value.snapshot } } }, "paymentMethods": paymentMethods.flatMap { (value: [PaymentMethod?]) -> [Snapshot?] in value.map { (value: PaymentMethod?) -> Snapshot? in value.flatMap { (value: PaymentMethod) -> Snapshot in value.snapshot } } }, "pocWorkDay": pocWorkDay.flatMap { (value: [PocWorkDay?]) -> [Snapshot?] in value.map { (value: PocWorkDay?) -> Snapshot? in value.flatMap { (value: PocWorkDay) -> Snapshot in value.snapshot } } }, "address": address.flatMap { (value: Address) -> Snapshot in value.snapshot }, "phone": phone.flatMap { (value: Phone) -> Snapshot in value.snapshot }])
+      public init(id: GraphQLID? = nil, status: Status, tradingName: String? = nil, officialName: String? = nil, address: Address? = nil) {
+        self.init(snapshot: ["__typename": "POC", "id": id, "status": status, "tradingName": tradingName, "officialName": officialName, "address": address.flatMap { (value: Address) -> Snapshot in value.snapshot }])
       }
 
       public var __typename: String {
@@ -152,318 +148,12 @@ public final class PocSearchMethodQuery: GraphQLQuery {
         }
       }
 
-      public var deliveryTypes: [DeliveryType?]? {
-        get {
-          return (snapshot["deliveryTypes"] as? [Snapshot?]).flatMap { (value: [Snapshot?]) -> [DeliveryType?] in value.map { (value: Snapshot?) -> DeliveryType? in value.flatMap { (value: Snapshot) -> DeliveryType in DeliveryType(snapshot: value) } } }
-        }
-        set {
-          snapshot.updateValue(newValue.flatMap { (value: [DeliveryType?]) -> [Snapshot?] in value.map { (value: DeliveryType?) -> Snapshot? in value.flatMap { (value: DeliveryType) -> Snapshot in value.snapshot } } }, forKey: "deliveryTypes")
-        }
-      }
-
-      public var paymentMethods: [PaymentMethod?]? {
-        get {
-          return (snapshot["paymentMethods"] as? [Snapshot?]).flatMap { (value: [Snapshot?]) -> [PaymentMethod?] in value.map { (value: Snapshot?) -> PaymentMethod? in value.flatMap { (value: Snapshot) -> PaymentMethod in PaymentMethod(snapshot: value) } } }
-        }
-        set {
-          snapshot.updateValue(newValue.flatMap { (value: [PaymentMethod?]) -> [Snapshot?] in value.map { (value: PaymentMethod?) -> Snapshot? in value.flatMap { (value: PaymentMethod) -> Snapshot in value.snapshot } } }, forKey: "paymentMethods")
-        }
-      }
-
-      public var pocWorkDay: [PocWorkDay?]? {
-        get {
-          return (snapshot["pocWorkDay"] as? [Snapshot?]).flatMap { (value: [Snapshot?]) -> [PocWorkDay?] in value.map { (value: Snapshot?) -> PocWorkDay? in value.flatMap { (value: Snapshot) -> PocWorkDay in PocWorkDay(snapshot: value) } } }
-        }
-        set {
-          snapshot.updateValue(newValue.flatMap { (value: [PocWorkDay?]) -> [Snapshot?] in value.map { (value: PocWorkDay?) -> Snapshot? in value.flatMap { (value: PocWorkDay) -> Snapshot in value.snapshot } } }, forKey: "pocWorkDay")
-        }
-      }
-
       public var address: Address? {
         get {
           return (snapshot["address"] as? Snapshot).flatMap { Address(snapshot: $0) }
         }
         set {
           snapshot.updateValue(newValue?.snapshot, forKey: "address")
-        }
-      }
-
-      public var phone: Phone? {
-        get {
-          return (snapshot["phone"] as? Snapshot).flatMap { Phone(snapshot: $0) }
-        }
-        set {
-          snapshot.updateValue(newValue?.snapshot, forKey: "phone")
-        }
-      }
-
-      public struct DeliveryType: GraphQLSelectionSet {
-        public static let possibleTypes = ["POCDeliveryType"]
-
-        public static let selections: [GraphQLSelection] = [
-          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("pocDeliveryTypeId", type: .nonNull(.scalar(GraphQLID.self))),
-          GraphQLField("deliveryTypeId", type: .nonNull(.scalar(GraphQLID.self))),
-          GraphQLField("price", type: .scalar(Double.self)),
-          GraphQLField("title", type: .scalar(String.self)),
-          GraphQLField("subtitle", type: .scalar(String.self)),
-          GraphQLField("active", type: .scalar(Bool.self)),
-        ]
-
-        public var snapshot: Snapshot
-
-        public init(snapshot: Snapshot) {
-          self.snapshot = snapshot
-        }
-
-        public init(pocDeliveryTypeId: GraphQLID, deliveryTypeId: GraphQLID, price: Double? = nil, title: String? = nil, subtitle: String? = nil, active: Bool? = nil) {
-          self.init(snapshot: ["__typename": "POCDeliveryType", "pocDeliveryTypeId": pocDeliveryTypeId, "deliveryTypeId": deliveryTypeId, "price": price, "title": title, "subtitle": subtitle, "active": active])
-        }
-
-        public var __typename: String {
-          get {
-            return snapshot["__typename"]! as! String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        public var pocDeliveryTypeId: GraphQLID {
-          get {
-            return snapshot["pocDeliveryTypeId"]! as! GraphQLID
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "pocDeliveryTypeId")
-          }
-        }
-
-        public var deliveryTypeId: GraphQLID {
-          get {
-            return snapshot["deliveryTypeId"]! as! GraphQLID
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "deliveryTypeId")
-          }
-        }
-
-        public var price: Double? {
-          get {
-            return snapshot["price"] as? Double
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "price")
-          }
-        }
-
-        public var title: String? {
-          get {
-            return snapshot["title"] as? String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "title")
-          }
-        }
-
-        public var subtitle: String? {
-          get {
-            return snapshot["subtitle"] as? String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "subtitle")
-          }
-        }
-
-        public var active: Bool? {
-          get {
-            return snapshot["active"] as? Bool
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "active")
-          }
-        }
-      }
-
-      public struct PaymentMethod: GraphQLSelectionSet {
-        public static let possibleTypes = ["POCPaymentMethod"]
-
-        public static let selections: [GraphQLSelection] = [
-          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("pocPaymentMethodId", type: .scalar(GraphQLID.self)),
-          GraphQLField("paymentMethodId", type: .scalar(GraphQLID.self)),
-          GraphQLField("active", type: .scalar(Bool.self)),
-          GraphQLField("title", type: .scalar(String.self)),
-          GraphQLField("subtitle", type: .scalar(String.self)),
-        ]
-
-        public var snapshot: Snapshot
-
-        public init(snapshot: Snapshot) {
-          self.snapshot = snapshot
-        }
-
-        public init(pocPaymentMethodId: GraphQLID? = nil, paymentMethodId: GraphQLID? = nil, active: Bool? = nil, title: String? = nil, subtitle: String? = nil) {
-          self.init(snapshot: ["__typename": "POCPaymentMethod", "pocPaymentMethodId": pocPaymentMethodId, "paymentMethodId": paymentMethodId, "active": active, "title": title, "subtitle": subtitle])
-        }
-
-        public var __typename: String {
-          get {
-            return snapshot["__typename"]! as! String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        public var pocPaymentMethodId: GraphQLID? {
-          get {
-            return snapshot["pocPaymentMethodId"] as? GraphQLID
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "pocPaymentMethodId")
-          }
-        }
-
-        public var paymentMethodId: GraphQLID? {
-          get {
-            return snapshot["paymentMethodId"] as? GraphQLID
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "paymentMethodId")
-          }
-        }
-
-        public var active: Bool? {
-          get {
-            return snapshot["active"] as? Bool
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "active")
-          }
-        }
-
-        public var title: String? {
-          get {
-            return snapshot["title"] as? String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "title")
-          }
-        }
-
-        public var subtitle: String? {
-          get {
-            return snapshot["subtitle"] as? String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "subtitle")
-          }
-        }
-      }
-
-      public struct PocWorkDay: GraphQLSelectionSet {
-        public static let possibleTypes = ["POCWorkDay"]
-
-        public static let selections: [GraphQLSelection] = [
-          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("weekDay", type: .scalar(Int.self)),
-          GraphQLField("active", type: .scalar(Bool.self)),
-          GraphQLField("workingInterval", type: .list(.object(WorkingInterval.selections))),
-        ]
-
-        public var snapshot: Snapshot
-
-        public init(snapshot: Snapshot) {
-          self.snapshot = snapshot
-        }
-
-        public init(weekDay: Int? = nil, active: Bool? = nil, workingInterval: [WorkingInterval?]? = nil) {
-          self.init(snapshot: ["__typename": "POCWorkDay", "weekDay": weekDay, "active": active, "workingInterval": workingInterval.flatMap { (value: [WorkingInterval?]) -> [Snapshot?] in value.map { (value: WorkingInterval?) -> Snapshot? in value.flatMap { (value: WorkingInterval) -> Snapshot in value.snapshot } } }])
-        }
-
-        public var __typename: String {
-          get {
-            return snapshot["__typename"]! as! String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        /// The day of the week
-        public var weekDay: Int? {
-          get {
-            return snapshot["weekDay"] as? Int
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "weekDay")
-          }
-        }
-
-        /// Sets if the Time is Active or Not
-        public var active: Bool? {
-          get {
-            return snapshot["active"] as? Bool
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "active")
-          }
-        }
-
-        public var workingInterval: [WorkingInterval?]? {
-          get {
-            return (snapshot["workingInterval"] as? [Snapshot?]).flatMap { (value: [Snapshot?]) -> [WorkingInterval?] in value.map { (value: Snapshot?) -> WorkingInterval? in value.flatMap { (value: Snapshot) -> WorkingInterval in WorkingInterval(snapshot: value) } } }
-          }
-          set {
-            snapshot.updateValue(newValue.flatMap { (value: [WorkingInterval?]) -> [Snapshot?] in value.map { (value: WorkingInterval?) -> Snapshot? in value.flatMap { (value: WorkingInterval) -> Snapshot in value.snapshot } } }, forKey: "workingInterval")
-          }
-        }
-
-        public struct WorkingInterval: GraphQLSelectionSet {
-          public static let possibleTypes = ["POCWorkingInterval"]
-
-          public static let selections: [GraphQLSelection] = [
-            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("openingTime", type: .nonNull(.scalar(String.self))),
-            GraphQLField("closingTime", type: .nonNull(.scalar(String.self))),
-          ]
-
-          public var snapshot: Snapshot
-
-          public init(snapshot: Snapshot) {
-            self.snapshot = snapshot
-          }
-
-          public init(openingTime: String, closingTime: String) {
-            self.init(snapshot: ["__typename": "POCWorkingInterval", "openingTime": openingTime, "closingTime": closingTime])
-          }
-
-          public var __typename: String {
-            get {
-              return snapshot["__typename"]! as! String
-            }
-            set {
-              snapshot.updateValue(newValue, forKey: "__typename")
-            }
-          }
-
-          public var openingTime: String {
-            get {
-              return snapshot["openingTime"]! as! String
-            }
-            set {
-              snapshot.updateValue(newValue, forKey: "openingTime")
-            }
-          }
-
-          public var closingTime: String {
-            get {
-              return snapshot["closingTime"]! as! String
-            }
-            set {
-              snapshot.updateValue(newValue, forKey: "closingTime")
-            }
-          }
         }
       }
 
@@ -561,43 +251,6 @@ public final class PocSearchMethodQuery: GraphQLQuery {
           }
           set {
             snapshot.updateValue(newValue, forKey: "coordinates")
-          }
-        }
-      }
-
-      public struct Phone: GraphQLSelectionSet {
-        public static let possibleTypes = ["POCPhone"]
-
-        public static let selections: [GraphQLSelection] = [
-          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("phoneNumber", type: .scalar(String.self)),
-        ]
-
-        public var snapshot: Snapshot
-
-        public init(snapshot: Snapshot) {
-          self.snapshot = snapshot
-        }
-
-        public init(phoneNumber: String? = nil) {
-          self.init(snapshot: ["__typename": "POCPhone", "phoneNumber": phoneNumber])
-        }
-
-        public var __typename: String {
-          get {
-            return snapshot["__typename"]! as! String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        public var phoneNumber: String? {
-          get {
-            return snapshot["phoneNumber"] as? String
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "phoneNumber")
           }
         }
       }
