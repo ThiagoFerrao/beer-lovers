@@ -37,29 +37,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-kO-GPP">
-                                <rect key="frame" x="16" y="32" width="343" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                <rect key="frame" x="16" y="32" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will use your address to find the fastest delivery option available in your area." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5am-Rp-AKc">
-                                <rect key="frame" x="16" y="83" width="343" height="37.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <rect key="frame" x="16" y="84" width="343" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter the delivery address" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-RO-SF2">
-                                <rect key="frame" x="8" y="152.5" width="343" height="56"/>
+                                <rect key="frame" x="8" y="156" width="343" height="56"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-0s-EpE">
+                                <rect key="frame" x="0.0" y="212" width="375" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressResultCell" id="igH-2i-Ox9" customClass="AddressResultCell" customModule="Beer_Lovers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="igH-2i-Ox9" id="zvF-CS-hZy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-UX-N4Q">
+                                                    <rect key="frame" x="32" y="12.5" width="311" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Nfs-UX-N4Q" secondAttribute="trailing" constant="32" id="Bl5-ET-EK2"/>
+                                                <constraint firstItem="Nfs-UX-N4Q" firstAttribute="leading" secondItem="zvF-CS-hZy" secondAttribute="leading" constant="32" id="MVX-ft-Bva"/>
+                                                <constraint firstItem="Nfs-UX-N4Q" firstAttribute="centerY" secondItem="zvF-CS-hZy" secondAttribute="centerY" id="fqf-Fa-7Jt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cityResultLabel" destination="Nfs-UX-N4Q" id="cV9-Pl-IzR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Xd4-8g-PmC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SLX-TT-86H"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KNK-RO-SF2" firstAttribute="leading" secondItem="5am-Rp-AKc" secondAttribute="leading" constant="-8" id="2qB-SG-5nP"/>
+                            <constraint firstItem="PRI-0s-EpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6nn-pf-64f"/>
                             <constraint firstItem="5am-Rp-AKc" firstAttribute="top" secondItem="gHW-kO-GPP" secondAttribute="bottom" constant="16" id="Jbh-zr-bUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PRI-0s-EpE" secondAttribute="bottom" id="KRM-gV-2do"/>
                             <constraint firstItem="5am-Rp-AKc" firstAttribute="leading" secondItem="gHW-kO-GPP" secondAttribute="leading" id="LHQ-Ro-Rq0"/>
                             <constraint firstItem="5am-Rp-AKc" firstAttribute="trailing" secondItem="gHW-kO-GPP" secondAttribute="trailing" id="Nzn-QG-1nB"/>
+                            <constraint firstItem="PRI-0s-EpE" firstAttribute="top" secondItem="KNK-RO-SF2" secondAttribute="bottom" id="T8R-GW-Swd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PRI-0s-EpE" secondAttribute="trailing" id="fSe-OM-QAU"/>
                             <constraint firstItem="KNK-RO-SF2" firstAttribute="top" secondItem="5am-Rp-AKc" secondAttribute="bottom" constant="32" id="gtH-ca-SOk"/>
                             <constraint firstItem="KNK-RO-SF2" firstAttribute="trailing" secondItem="5am-Rp-AKc" secondAttribute="trailing" constant="-8" id="pB7-uc-hbS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHW-kO-GPP" secondAttribute="trailing" constant="16" id="qET-c2-cGH"/>
@@ -70,6 +110,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Delivery Address" id="0wd-D4-nZA"/>
                     <connections>
+                        <outlet property="searchBar" destination="KNK-RO-SF2" id="oQZ-uu-QG3"/>
+                        <outlet property="tableView" destination="PRI-0s-EpE" id="olE-tq-aoj"/>
                         <segue destination="Lff-8I-uTI" kind="show" identifier="SegueToProdutListVC" id="QLa-Cb-EPV"/>
                     </connections>
                 </viewController>

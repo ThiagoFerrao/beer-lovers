@@ -18,6 +18,8 @@
 		AF488B9D20AA639B0024B39C /* Beer_LoversUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF488B9C20AA639B0024B39C /* Beer_LoversUITests.swift */; };
 		AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */; };
 		AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */; };
+		AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85120AA773A007651F8 /* AddressResultCell.swift */; };
+		AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		AF488B9E20AA639B0024B39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7FA84C20AA6D34007651F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		AF7FA85120AA773A007651F8 /* AddressResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultCell.swift; sourceTree = "<group>"; };
+		AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifiers.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +139,9 @@
 			children = (
 				AF488B7C20AA639A0024B39C /* AppDelegate.swift */,
 				AF7FA84A20AA6A51007651F8 /* ViewControllers */,
+				AF7FA85020AA76F4007651F8 /* TableViewCells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
+				AF7FA85320AA78BA007651F8 /* Constants */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
 				AF488B8820AA639A0024B39C /* Info.plist */,
 			);
@@ -177,6 +183,22 @@
 				AF488B8020AA639A0024B39C /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF7FA85020AA76F4007651F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA85120AA773A007651F8 /* AddressResultCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		AF7FA85320AA78BA007651F8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,8 +437,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
+				AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
+				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
