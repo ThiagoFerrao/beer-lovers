@@ -24,6 +24,8 @@
 		AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85920AA81F4007651F8 /* HomePresenter.swift */; };
 		AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */; };
 		AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */; };
+		AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */; };
+		AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		AF7FA85920AA81F4007651F8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInterface.swift; sourceTree = "<group>"; };
 		AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleInterface.swift; sourceTree = "<group>"; };
+		AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorIO.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,8 @@
 				AF7FA84A20AA6A51007651F8 /* ViewControllers */,
 				AF7FA85E20AA8279007651F8 /* Modules */,
 				AF7FA85820AA81BC007651F8 /* Presenters */,
+				AF7FA86320AA8C9A007651F8 /* InteractorIOs */,
+				AF7FA86120AA8C28007651F8 /* Interactors */,
 				AF7FA85020AA76F4007651F8 /* TableViewCells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
@@ -235,6 +241,22 @@
 				AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		AF7FA86120AA8C28007651F8 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA86420AA8CB7007651F8 /* HomeInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		AF7FA86320AA8C9A007651F8 /* InteractorIOs */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA86620AA8CC7007651F8 /* HomeInteractorIO.swift */,
+			);
+			path = InteractorIOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +501,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
+				AF7FA86720AA8CC7007651F8 /* HomeInteractorIO.swift in Sources */,
+				AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */,
 				AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */,
 				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,
 				AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */,

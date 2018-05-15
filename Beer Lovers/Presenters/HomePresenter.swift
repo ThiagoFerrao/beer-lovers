@@ -6,15 +6,16 @@
 //
 
 import UIKit
-import Foundation
 
 class HomePresenter: NSObject {
     
     var userInterface   : HomeViewInterface?
+    var interactorInput : HomeInteractorInput?
     
     init(userInterface: HomeViewInterface) {
         super.init()
         
+        self.interactorInput = HomeInteractor(output: self)
         self.userInterface = userInterface
     }
 }
@@ -33,6 +34,13 @@ extension HomePresenter: HomeModuleInterface {
 
 extension HomePresenter: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        interactorInput?.fetchAutocompleteAdressesBasedOnValue(searchText)
     }
+}
+
+
+// MARK: HomeInteractorOutput
+
+extension HomePresenter: HomeInteractorOutput {
+    
 }
