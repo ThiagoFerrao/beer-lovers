@@ -35,11 +35,12 @@ extension HomeInteractor: HomeInteractorInput {
             (results, error) -> Void in
             
             guard let results = results else {
-                print("[HomeInteractor] An Error occurred in the fetchAutocompleteAdressesBasedOnValue method - Error: \(error?.localizedDescription ?? "Unknown")")
+                print("[HomeInteractor] An Error occurred in the fetchAutocompleteAdressesBasedOnValue method"
+                    + " - Error: \(error?.localizedDescription ?? "Unknown")")
                 return
             }
             
-            print(results[0].attributedFullText)
+            self.interactorOutput?.foundAutocompeteResults(results)
         })
     }
 }

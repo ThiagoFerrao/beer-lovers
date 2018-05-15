@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import GooglePlaces
 
 protocol HomeViewInterface {
     func setupSearchbarWithDelegate(_ searchBarDelegate: UISearchBarDelegate)
+    func updateTableVieWithAutocompleteResults(_ autocompleteResults: [GMSAutocompletePrediction])
 }

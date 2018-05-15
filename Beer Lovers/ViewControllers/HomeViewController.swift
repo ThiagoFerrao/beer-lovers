@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class HomeViewController: UIViewController {
 
@@ -28,6 +29,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewInterface {
     func setupSearchbarWithDelegate(_ searchBarDelegate: UISearchBarDelegate) {
         searchBar.delegate =  searchBarDelegate
+    }
+    
+    func updateTableVieWithAutocompleteResults(_ autocompleteResults: [GMSAutocompletePrediction]) {
+        tableView.reloadData()
     }
 }
 

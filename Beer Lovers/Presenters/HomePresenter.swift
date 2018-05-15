@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class HomePresenter: NSObject {
     
@@ -42,5 +43,7 @@ extension HomePresenter: UISearchBarDelegate {
 // MARK: HomeInteractorOutput
 
 extension HomePresenter: HomeInteractorOutput {
-    
+    func foundAutocompeteResults(_ autocompleteResults: [GMSAutocompletePrediction]) {
+        userInterface?.updateTableVieWithAutocompleteResults(autocompleteResults)
+    }
 }
