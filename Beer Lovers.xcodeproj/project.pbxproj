@@ -21,6 +21,9 @@
 		AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85120AA773A007651F8 /* AddressResultCell.swift */; };
 		AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */; };
 		AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85620AA7E4A007651F8 /* APIKeys.swift */; };
+		AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85920AA81F4007651F8 /* HomePresenter.swift */; };
+		AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */; };
+		AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		AF7FA85120AA773A007651F8 /* AddressResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultCell.swift; sourceTree = "<group>"; };
 		AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifiers.swift; sourceTree = "<group>"; };
 		AF7FA85620AA7E4A007651F8 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		AF7FA85920AA81F4007651F8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInterface.swift; sourceTree = "<group>"; };
+		AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleInterface.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				AF488B7C20AA639A0024B39C /* AppDelegate.swift */,
+				AF7FA85B20AA822C007651F8 /* Views */,
 				AF7FA84A20AA6A51007651F8 /* ViewControllers */,
+				AF7FA85E20AA8279007651F8 /* Modules */,
+				AF7FA85820AA81BC007651F8 /* Presenters */,
 				AF7FA85020AA76F4007651F8 /* TableViewCells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
@@ -202,6 +211,30 @@
 				AF7FA85620AA7E4A007651F8 /* APIKeys.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF7FA85820AA81BC007651F8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA85920AA81F4007651F8 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AF7FA85B20AA822C007651F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF7FA85E20AA8279007651F8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,12 +479,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
+				AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */,
+				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,
 				AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */,
 				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
+				AF7FA85A20AA81F4007651F8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar    : UISearchBar!
+    @IBOutlet weak var tableView    : UITableView!
+    
+    var eventHandler                : HomeModuleInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        eventHandler = HomePresenter(userInterface: self)
+        eventHandler?.viewDidLoad()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+// MARK: HomeViewInterface
+
+extension HomeViewController: HomeViewInterface {
+    func setupSearchbar() {
+        
     }
 }
 
