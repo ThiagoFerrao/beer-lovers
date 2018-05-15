@@ -69,7 +69,7 @@ extension HomeInteractor: HomeInteractorInput {
                 return
             }
             
-            self.interactorOutput?.foundAddressLagLong((String(result.coordinate.latitude), String(result.coordinate.longitude)))
+            self.interactorOutput?.foundAddressLagLong((String(result.coordinate.latitude), String(result.coordinate.longitude)), fullAddressText: address.attributedFullText.string)
         })
     }
 }

@@ -52,8 +52,8 @@ extension HomePresenter: HomeInteractorOutput {
         userInterface?.updateTableVieWithAutocompleteResults(autocompleteResults)
     }
     
-    func foundAddressLagLong(_ tupleLatLong: (String, String)) {
-        userInterface?.presentProductListScreenWithLatLong(tupleLatLong)
+    func foundAddressLagLong(_ tupleLatLong: (String, String), fullAddressText: String) {
+        userInterface?.presentProductListScreenWithLatLong(tupleLatLong, fullAddressText: fullAddressText)
     }
     
     func emptySearchValueWasPassed() {

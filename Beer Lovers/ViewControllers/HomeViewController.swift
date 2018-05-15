@@ -33,10 +33,11 @@ class HomeViewController: UIViewController {
             return
         }
         
-        let tupleLatLong = sender as! (String, String)
+        let sender = sender as! ((String, String), String)
         let productListVC = segue.destination as! ProductListViewController
         
-        productListVC.tupleLatLong = tupleLatLong
+        productListVC.fullAddressText = sender.1
+        productListVC.tupleLatLong = sender.0
     }
 }
 
@@ -54,8 +55,8 @@ extension HomeViewController: HomeViewInterface {
         tableView.reloadData()
     }
     
-    func presentProductListScreenWithLatLong(_ tupleLatLong: (String, String)) {
-        performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: tupleLatLong)
+    func presentProductListScreenWithLatLong(_ tupleLatLong: (String, String), fullAddressText: String) {
+        performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: (tupleLatLong, fullAddressText))
     }
     
     func showEmptyResultsCell() {
