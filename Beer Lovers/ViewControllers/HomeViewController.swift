@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView    : UITableView!
     
     var eventHandler                : HomeModuleInterface?
+    var autocompleteResults         = [GMSAutocompletePrediction]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ extension HomeViewController: HomeViewInterface {
     }
     
     func updateTableVieWithAutocompleteResults(_ autocompleteResults: [GMSAutocompletePrediction]) {
+        self.autocompleteResults = autocompleteResults
         tableView.reloadData()
     }
 }
@@ -41,11 +43,14 @@ extension HomeViewController: HomeViewInterface {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return autocompleteResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELLS_IDENTIFIERS.HOME_VIEW_CONTROLLER.ADDRESS_RESULT_CELL, for: indexPath) as! AddressResultCell
+        cell.addressResult = autocompleteResults[indexPath.row]
+        
+        return cell
     }
 }
 

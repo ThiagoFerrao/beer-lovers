@@ -156,7 +156,7 @@
 				AF7FA85820AA81BC007651F8 /* Presenters */,
 				AF7FA86320AA8C9A007651F8 /* InteractorIOs */,
 				AF7FA86120AA8C28007651F8 /* Interactors */,
-				AF7FA85020AA76F4007651F8 /* TableViewCells */,
+				AF7FA85020AA76F4007651F8 /* Cells */,
 				AF7FA84B20AA6A6D007651F8 /* Storyboards */,
 				AF7FA85320AA78BA007651F8 /* Constants */,
 				AF488B8320AA639A0024B39C /* Assets.xcassets */,
@@ -202,12 +202,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		AF7FA85020AA76F4007651F8 /* TableViewCells */ = {
+		AF7FA85020AA76F4007651F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				AF7FA85120AA773A007651F8 /* AddressResultCell.swift */,
 			);
-			path = TableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		AF7FA85320AA78BA007651F8 /* Constants */ = {
