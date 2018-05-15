@@ -30,6 +30,12 @@ class HomeInteractor: NSObject {
 
 extension HomeInteractor: HomeInteractorInput {
     func fetchAutocompleteAdressesBasedOnValue(_ value: String) {
+        
+        guard (value != "") else {
+            self.interactorOutput?.foundAutocompeteResults([GMSAutocompletePrediction]())
+            return
+        }
+        
         placesClient.autocompleteQuery(value, bounds: nil, filter: filter, callback: {
             
             (results, error) -> Void in
