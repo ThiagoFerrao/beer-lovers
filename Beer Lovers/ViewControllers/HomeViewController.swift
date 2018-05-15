@@ -101,9 +101,6 @@ extension HomeViewController: UITableViewDataSource {
             
         case HomeTableTypeEnum.ERROR:
             return tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIERS.HOME.ERROR_RESULT_CELL, for: indexPath)
-            
-        default:
-            return UITableViewCell()
         }
     }
 }
