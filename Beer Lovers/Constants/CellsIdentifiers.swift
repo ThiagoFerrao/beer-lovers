@@ -7,7 +7,7 @@
 
 struct CELLS_IDENTIFIERS {
     
-    struct HOME_VIEW_CONTROLLER{
+    struct HOME_VIEW_CONTROLLER {
         static let ADDRESS_RESULT_CELL = "AddressResultCell"
     }
 }

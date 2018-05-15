@@ -20,6 +20,7 @@
 		AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */; };
 		AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85120AA773A007651F8 /* AddressResultCell.swift */; };
 		AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */; };
+		AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA85620AA7E4A007651F8 /* APIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		AF7FA84E20AA6D80007651F8 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		AF7FA85120AA773A007651F8 /* AddressResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultCell.swift; sourceTree = "<group>"; };
 		AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifiers.swift; sourceTree = "<group>"; };
+		AF7FA85620AA7E4A007651F8 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7FA85420AA78D3007651F8 /* CellsIdentifiers.swift */,
+				AF7FA85620AA7E4A007651F8 /* APIKeys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				AF488B7F20AA639A0024B39C /* HomeViewController.swift in Sources */,
 				AF7FA85520AA78D3007651F8 /* CellsIdentifiers.swift in Sources */,
+				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
@@ -625,7 +629,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -642,7 +649,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -658,7 +668,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -675,7 +689,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -690,7 +708,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -705,7 +727,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
