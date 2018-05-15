@@ -69,6 +69,10 @@ extension HomeViewController: HomeViewInterface {
         self.tableViewStatus = HomeTableTypeEnum.ERROR
         tableView.reloadData()
     }
+    
+    func showAlert(_ alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 

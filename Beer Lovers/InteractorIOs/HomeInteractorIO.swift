@@ -17,4 +17,5 @@ protocol HomeInteractorOutput {
     func foundAddressLagLong(_ tupleLatLong: (String, String))
     func emptySearchValueWasPassed()
     func errorWhileFetchingAutocompeteResults()
+    func errorWhileFetchingLatLong()
 }

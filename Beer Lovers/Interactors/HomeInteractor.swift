@@ -56,7 +56,7 @@ extension HomeInteractor: HomeInteractorInput {
     
     func fetchLatLongFromAddress(_ address: GMSAutocompletePrediction) {
         guard let placeID = address.placeID else {
-            print("[HomeInteractor] Unable the placeID from address")
+            self.interactorOutput?.errorWhileFetchingLatLong()
             return
         }
         
@@ -65,8 +65,7 @@ extension HomeInteractor: HomeInteractorInput {
             (result, error) in
             
             guard let result = result else {
-                print("[HomeInteractor] An Error occurred in the fetchLagAndLongFromAddress method"
-                    + " - Error: \(error?.localizedDescription ?? "Unknown")")
+                self.interactorOutput?.errorWhileFetchingLatLong()
                 return
             }
             

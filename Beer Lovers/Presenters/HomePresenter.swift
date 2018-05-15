@@ -63,4 +63,13 @@ extension HomePresenter: HomeInteractorOutput {
     func errorWhileFetchingAutocompeteResults() {
         userInterface?.showFetchingErrorCell()
     }
+    
+    func errorWhileFetchingLatLong() {
+        let alertController = UIAlertController(title: "And Error Occurred"
+            , message: "Unable to get the location of the address selected.\nTry again later :("
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
+        userInterface?.showAlert(alertController)
+    }
 }

@@ -14,4 +14,5 @@ protocol HomeViewInterface {
     func presentProductListScreenWithLatLong(_ tupleLatLong: (String, String))
     func showEmptyResultsCell()
     func showFetchingErrorCell()
+    func showAlert(_ alertController: UIAlertController)
 }
