@@ -8,6 +8,7 @@ inhibit_all_warnings!
 target 'Beer Lovers' do
     pod 'GooglePlaces'
     pod 'Apollo'
+    pod 'Kingfisher'
     
     target 'Beer LoversTests' do
         inherit! :complete
