@@ -10,12 +10,13 @@ import GooglePlaces
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var searchBar    : UISearchBar!
-    @IBOutlet weak var tableView    : UITableView!
+    @IBOutlet weak var searchBar        : UISearchBar!
+    @IBOutlet weak var tableView        : UITableView!
+    @IBOutlet weak var loadingIndicator : UIActivityIndicatorView!
     
-    var eventHandler                : HomeModuleInterface?
-    var autocompleteResults         = [GMSAutocompletePrediction]()
-    var tableViewStatus             = HomeTableTypeEnum.EMPTY
+    var eventHandler                    : HomeModuleInterface?
+    var autocompleteResults             = [GMSAutocompletePrediction]()
+    var tableViewStatus                 = HomeTableTypeEnum.EMPTY
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,16 @@ extension HomeViewController: HomeViewInterface {
     
     func presentProductListScreenWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch) {
         performSegue(withIdentifier: SEGUE_IDENTIFIERS.HOME.TO_PRODUCT_LIST, sender: pointOfContact)
+    }
+    
+    func showLoading() {
+        tableView.isUserInteractionEnabled = false
+        loadingIndicator.isHidden = false
+    }
+    
+    func hidesLoading() {
+        loadingIndicator.isHidden = true
+        tableView.isUserInteractionEnabled = true
     }
 }
 

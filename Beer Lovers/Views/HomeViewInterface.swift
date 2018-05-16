@@ -15,4 +15,6 @@ protocol HomeViewInterface {
     func showFetchingResultsErrorCell()
     func showAlert(_ alertController: UIAlertController)
     func presentProductListScreenWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch)
+    func showLoading()
+    func hidesLoading()
 }

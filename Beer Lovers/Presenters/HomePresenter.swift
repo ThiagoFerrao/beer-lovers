@@ -30,6 +30,7 @@ extension HomePresenter: HomeModuleInterface {
     }
     
     func cellWasSelectedWithAddress(_ addressSelected: GMSAutocompletePrediction) {
+        userInterface?.showLoading()
         interactorInput?.fetchLatLongFromAddress(addressSelected)
     }
 }
@@ -66,10 +67,12 @@ extension HomePresenter: HomeInteractorOutput {
             , preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
+        userInterface?.hidesLoading()
         userInterface?.showAlert(alertController)
     }
     
     func foundPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch) {
+        userInterface?.hidesLoading()
         userInterface?.presentProductListScreenWithPointOfContact(pointOfContact)
     }
 }

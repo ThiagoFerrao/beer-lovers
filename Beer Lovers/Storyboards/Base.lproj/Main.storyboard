@@ -92,7 +92,7 @@
                                             <outlet property="cityResultLabel" destination="Nfs-UX-N4Q" id="cV9-Pl-IzR"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorResultCell" id="xdS-B5-UbL">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorResultCell" id="xdS-B5-UbL">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdS-B5-UbL" id="CTe-Ia-pg2">
@@ -113,7 +113,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyResultCell" id="N6Z-e7-Kf5">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyResultCell" id="N6Z-e7-Kf5">
                                         <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N6Z-e7-Kf5" id="pGF-gi-W13">
@@ -140,11 +140,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SLX-TT-86H"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-xe-ZBE">
+                                <rect key="frame" x="178" y="292" width="20" height="20"/>
+                                <color key="color" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KNK-RO-SF2" firstAttribute="leading" secondItem="5am-Rp-AKc" secondAttribute="leading" constant="-8" id="2qB-SG-5nP"/>
                             <constraint firstItem="PRI-0s-EpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6nn-pf-64f"/>
+                            <constraint firstItem="1Lh-xe-ZBE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dhk-uq-yAW"/>
+                            <constraint firstItem="1Lh-xe-ZBE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="J5L-Fg-GdG"/>
                             <constraint firstItem="5am-Rp-AKc" firstAttribute="top" secondItem="gHW-kO-GPP" secondAttribute="bottom" constant="16" id="Jbh-zr-bUf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PRI-0s-EpE" secondAttribute="bottom" id="KRM-gV-2do"/>
                             <constraint firstItem="5am-Rp-AKc" firstAttribute="leading" secondItem="gHW-kO-GPP" secondAttribute="leading" id="LHQ-Ro-Rq0"/>
@@ -161,6 +167,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Delivery Address" id="0wd-D4-nZA"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="1Lh-xe-ZBE" id="CI0-09-lVk"/>
                         <outlet property="searchBar" destination="KNK-RO-SF2" id="oQZ-uu-QG3"/>
                         <outlet property="tableView" destination="PRI-0s-EpE" id="olE-tq-aoj"/>
                         <segue destination="Lff-8I-uTI" kind="show" identifier="SegueToProdutListVC" id="QLa-Cb-EPV"/>
