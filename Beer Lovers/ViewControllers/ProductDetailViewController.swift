@@ -44,6 +44,7 @@ extension ProductDetailViewController: ProductDetailViewInterface {
     }
     
     func setupProductTitle(_ productTitle: String) {
+        self.title = productTitle
         self.productTitle.text = productTitle
     }
     

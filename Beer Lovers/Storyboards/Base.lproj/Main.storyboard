@@ -165,7 +165,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Delivery Address" id="0wd-D4-nZA"/>
+                    <navigationItem key="navigationItem" title="Delivery Address" id="0wd-D4-nZA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NSZ-d7-5AW"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="loadingIndicator" destination="1Lh-xe-ZBE" id="CI0-09-lVk"/>
                         <outlet property="searchBar" destination="KNK-RO-SF2" id="oQZ-uu-QG3"/>
@@ -343,6 +345,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yo8-RO-alK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hf8-pF-XB2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bKk-5J-m8k"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="r1Y-Pp-g03" id="HxI-z6-E4T"/>
                         <outlet property="categoriesLoadingIndicator" destination="no0-ac-kzo" id="1W4-BH-LnJ"/>
@@ -424,6 +429,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xAg-Lg-6S6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ens-AN-52B">
+                        <barButtonItem key="backBarButtonItem" title=" " id="lbT-PE-QAd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="productDescription" destination="Mlu-q0-qsa" id="StG-Ka-fvC"/>
                         <outlet property="productImage" destination="bgs-KD-XXL" id="0qZ-Gu-tws"/>
