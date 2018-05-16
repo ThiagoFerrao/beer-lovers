@@ -14,4 +14,5 @@ protocol ProductListViewInterface {
     func showsProductsLoading()
     func hidesProductsLoading()
     func updateSelectedIndexTo(_ newSelectedIndex: Int)
+    func cleanCurrentProductList()
 }

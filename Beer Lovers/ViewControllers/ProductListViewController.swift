@@ -85,6 +85,11 @@ extension ProductListViewController: ProductListViewInterface {
         updateCategoryCellAtIndex(oldSelectedIndex)
         updateCategoryCellAtIndex(newSelectedIndex)
     }
+    
+    func cleanCurrentProductList() {
+        productsList = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
+        productsCollectionView.reloadData()
+    }
 }
 
 

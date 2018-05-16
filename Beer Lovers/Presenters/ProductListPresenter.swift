@@ -56,6 +56,7 @@ extension ProductListPresenter: ProductListModuleInterface {
     }
     
     func categoryWasSelectedWithID(_ categoryID: String?) {
+        userInterface?.cleanCurrentProductList()
         userInterface?.showsProductsLoading()
         interactorInput?.fetchPointOfContactProductList(pointOfContactID: pointOfContactID, categoryID: categoryID)
     }
