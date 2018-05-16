@@ -7,5 +7,6 @@
 
 protocol ProductListModuleInterface {
     func viewDidLoadWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch?)
+    func newCategoryWasSelectedWithIndex(_ selectedIndex: Int)
     func categoryWasSelectedWithID(_ categoryID: String?)
 }

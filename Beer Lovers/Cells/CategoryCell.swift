@@ -23,4 +23,15 @@ class CategoryCell: UICollectionViewCell {
             divider.isHidden = isLastCell ?? false
         }
     }
+    
+    var isCellSelected: Bool? {
+        didSet {
+            guard isCellSelected ?? false else {
+                categoryLabel.textColor = COLORS.GRAY
+                return
+            }
+            
+            categoryLabel.textColor = COLORS.YELLOW
+        }
+    }
 }

@@ -14,11 +14,13 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var categoriesLoadingIndicator   : UIActivityIndicatorView!
     @IBOutlet weak var productsLoadingIndicator     : UIActivityIndicatorView!
     
-    var pointOfContact      : PocSearchMethodQuery.Data.PocSearch?
-    var eventHandler        : ProductListModuleInterface?
+    var selectedCategoryIndex   = -1
     
-    var productsCategories  = [AllCategoriesSearchQuery.Data.AllCategory?]()
-    var productsList        = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
+    var pointOfContact          : PocSearchMethodQuery.Data.PocSearch?
+    var eventHandler            : ProductListModuleInterface?
+    
+    var productsCategories      = [AllCategoriesSearchQuery.Data.AllCategory?]()
+    var productsList            = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,26 @@ extension ProductListViewController: ProductListViewInterface {
     func hidesProductsLoading() {
         productsLoadingIndicator.isHidden = true
     }
+    
+    func updateSelectedIndexTo(_ newSelectedIndex: Int) {
+        let oldSelectedIndex = selectedCategoryIndex
+        selectedCategoryIndex = newSelectedIndex
+        
+        let newSelectedIndexPath = IndexPath(row: newSelectedIndex, section: 0)
+        let oldSelectedIndexPath = IndexPath(row: oldSelectedIndex, section: 0)
+        
+        if let newSelectedCategoryCell = categoriesCollectionView.cellForItem(at: newSelectedIndexPath) as? CategoryCell {
+            newSelectedCategoryCell.isCellSelected = true
+        } else {
+            categoriesCollectionView.reloadItems(at: [newSelectedIndexPath])
+        }
+        
+        if let oldSelectedCategoryCell = categoriesCollectionView.cellForItem(at: oldSelectedIndexPath) as? CategoryCell {
+            oldSelectedCategoryCell.isCellSelected = false
+        } else {
+            categoriesCollectionView.reloadItems(at: [oldSelectedIndexPath])
+        }
+    }
 }
 
 
@@ -86,6 +108,7 @@ extension ProductListViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.CATEGORY_CELL, for: indexPath) as! CategoryCell
             cell.productCategory = productsCategories[indexPath.row]
             cell.isLastCell = productsCategories.count == indexPath.row + 1
+            cell.isCellSelected = indexPath.row == selectedCategoryIndex
             
             return cell
             
@@ -108,6 +131,7 @@ extension ProductListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView {
         case categoriesCollectionView:
+            eventHandler?.newCategoryWasSelectedWithIndex(indexPath.row)
             eventHandler?.categoryWasSelectedWithID(productsCategories[indexPath.row]?.id)
             return
             

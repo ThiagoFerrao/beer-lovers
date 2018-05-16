@@ -51,6 +51,10 @@ extension ProductListPresenter: ProductListModuleInterface {
         interactorInput?.fetchAllProductsCategories()
     }
     
+    func newCategoryWasSelectedWithIndex(_ selectedIndex: Int) {
+        userInterface?.updateSelectedIndexTo(selectedIndex)
+    }
+    
     func categoryWasSelectedWithID(_ categoryID: String?) {
         userInterface?.showsProductsLoading()
         interactorInput?.fetchPointOfContactProductList(pointOfContactID: pointOfContactID, categoryID: categoryID)
