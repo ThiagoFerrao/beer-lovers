@@ -206,13 +206,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE6-qv-9Ro">
-                                                    <rect key="frame" x="8" y="25.5" width="124" height="19.5"/>
+                                                    <rect key="frame" x="8" y="20.5" width="124" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR5-iq-lfq">
-                                                    <rect key="frame" x="138" y="0.0" width="1" height="70"/>
+                                                    <rect key="frame" x="138" y="0.0" width="1" height="60"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="TBg-dX-RMK"/>
@@ -306,6 +306,14 @@
                                     <outlet property="delegate" destination="Lff-8I-uTI" id="2la-LJ-ZCr"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="no0-ac-kzo">
+                                <rect key="frame" x="177" y="20" width="20" height="20"/>
+                                <color key="color" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5eQ-rf-KOR">
+                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                                <color key="color" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -315,16 +323,22 @@
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="trailing" secondItem="OIh-7Y-x07" secondAttribute="trailing" id="7p9-gu-sgr"/>
                             <constraint firstItem="fre-8z-0zc" firstAttribute="top" secondItem="r1Y-Pp-g03" secondAttribute="bottom" id="DGt-tq-biC"/>
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="bottom" secondItem="OIh-7Y-x07" secondAttribute="bottom" id="FkW-DU-jaW"/>
+                            <constraint firstItem="5eQ-rf-KOR" firstAttribute="centerY" secondItem="Yo8-RO-alK" secondAttribute="centerY" id="Lq2-HT-sb4"/>
                             <constraint firstItem="fre-8z-0zc" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" id="OD1-Rc-RBy"/>
+                            <constraint firstItem="no0-ac-kzo" firstAttribute="centerY" secondItem="r1Y-Pp-g03" secondAttribute="centerY" id="OOY-vs-j9M"/>
                             <constraint firstItem="OIh-7Y-x07" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" id="Pa5-UO-Nyz"/>
+                            <constraint firstItem="5eQ-rf-KOR" firstAttribute="centerX" secondItem="Yo8-RO-alK" secondAttribute="centerX" id="aQI-S4-2y5"/>
                             <constraint firstItem="r1Y-Pp-g03" firstAttribute="top" secondItem="Yo8-RO-alK" secondAttribute="top" id="n4j-Lw-XMb"/>
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="trailing" secondItem="fre-8z-0zc" secondAttribute="trailing" id="utw-DI-x05"/>
+                            <constraint firstItem="no0-ac-kzo" firstAttribute="centerX" secondItem="Yo8-RO-alK" secondAttribute="centerX" id="xWo-Ct-Q9l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yo8-RO-alK"/>
                     </view>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="r1Y-Pp-g03" id="HxI-z6-E4T"/>
+                        <outlet property="categoriesLoadingIndicator" destination="no0-ac-kzo" id="1W4-BH-LnJ"/>
                         <outlet property="productsCollectionView" destination="OIh-7Y-x07" id="Vpl-Dz-A0W"/>
+                        <outlet property="productsLoadingIndicator" destination="5eQ-rf-KOR" id="fsE-rE-wrl"/>
                         <segue destination="yyN-I1-8P4" kind="show" identifier="SegueToProductDetailVC" id="ILA-6o-xVB"/>
                     </connections>
                 </viewController>

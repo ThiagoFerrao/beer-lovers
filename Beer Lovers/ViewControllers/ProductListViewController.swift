@@ -9,8 +9,10 @@ import UIKit
 
 class ProductListViewController: UIViewController {
     
-    @IBOutlet weak var categoriesCollectionView : UICollectionView!
-    @IBOutlet weak var productsCollectionView   : UICollectionView!
+    @IBOutlet weak var categoriesCollectionView     : UICollectionView!
+    @IBOutlet weak var productsCollectionView       : UICollectionView!
+    @IBOutlet weak var categoriesLoadingIndicator   : UIActivityIndicatorView!
+    @IBOutlet weak var productsLoadingIndicator     : UIActivityIndicatorView!
     
     var pointOfContact      : PocSearchMethodQuery.Data.PocSearch?
     var eventHandler        : ProductListModuleInterface?
@@ -42,6 +44,22 @@ extension ProductListViewController: ProductListViewInterface {
     func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
         self.productsList = productList
         productsCollectionView.reloadData()
+    }
+    
+    func showsCategoriesLoading() {
+        categoriesLoadingIndicator.isHidden = false
+    }
+
+    func hidesCategoriesLoading() {
+        categoriesLoadingIndicator.isHidden = true
+    }
+
+    func showsProductsLoading() {
+        productsLoadingIndicator.isHidden = false
+    }
+    
+    func hidesProductsLoading() {
+        productsLoadingIndicator.isHidden = true
     }
 }
 
