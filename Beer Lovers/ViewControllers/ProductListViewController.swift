@@ -13,6 +13,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var productsCollectionView       : UICollectionView!
     @IBOutlet weak var categoriesLoadingIndicator   : UIActivityIndicatorView!
     @IBOutlet weak var productsLoadingIndicator     : UIActivityIndicatorView!
+    @IBOutlet weak var emptyProductListMessage      : UILabel!
     
     var selectedCategoryIndex   = -1
     
@@ -121,6 +122,14 @@ extension ProductListViewController: ProductListViewInterface {
     
     func showAlert(_ alertController: UIAlertController) {
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func showEmptyProductListMessage() {
+        emptyProductListMessage.isHidden = false
+    }
+    
+    func hidesEmptyProductListMessage() {
+        emptyProductListMessage.isHidden = true
     }
 }
 

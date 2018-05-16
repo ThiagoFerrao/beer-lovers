@@ -15,4 +15,5 @@ protocol ProductListInteractorOutput {
     func errorWhileFetchingProductsCategories()
     func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?])
     func errorWhileFetchingProductList()
+    func emptyProductList()
 }

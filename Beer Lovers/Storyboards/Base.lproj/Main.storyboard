@@ -306,6 +306,12 @@
                                     <outlet property="delegate" destination="Lff-8I-uTI" id="2la-LJ-ZCr"/>
                                 </connections>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to Find Any Products In This Category :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu4-VT-Lvz">
+                                <rect key="frame" x="40" y="281" width="295" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="no0-ac-kzo">
                                 <rect key="frame" x="177" y="20" width="20" height="20"/>
                                 <color key="color" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -321,12 +327,15 @@
                             <constraint firstItem="r1Y-Pp-g03" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" id="7Ov-3n-RtW"/>
                             <constraint firstItem="OIh-7Y-x07" firstAttribute="top" secondItem="fre-8z-0zc" secondAttribute="bottom" id="7jY-JL-4ht"/>
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="trailing" secondItem="OIh-7Y-x07" secondAttribute="trailing" id="7p9-gu-sgr"/>
+                            <constraint firstItem="wu4-VT-Lvz" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" constant="40" id="7qv-ZR-TJq"/>
                             <constraint firstItem="fre-8z-0zc" firstAttribute="top" secondItem="r1Y-Pp-g03" secondAttribute="bottom" id="DGt-tq-biC"/>
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="bottom" secondItem="OIh-7Y-x07" secondAttribute="bottom" id="FkW-DU-jaW"/>
+                            <constraint firstItem="wu4-VT-Lvz" firstAttribute="centerY" secondItem="Yo8-RO-alK" secondAttribute="centerY" id="Jli-Gu-3dB"/>
                             <constraint firstItem="5eQ-rf-KOR" firstAttribute="centerY" secondItem="Yo8-RO-alK" secondAttribute="centerY" id="Lq2-HT-sb4"/>
                             <constraint firstItem="fre-8z-0zc" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" id="OD1-Rc-RBy"/>
                             <constraint firstItem="no0-ac-kzo" firstAttribute="centerY" secondItem="r1Y-Pp-g03" secondAttribute="centerY" id="OOY-vs-j9M"/>
                             <constraint firstItem="OIh-7Y-x07" firstAttribute="leading" secondItem="Yo8-RO-alK" secondAttribute="leading" id="Pa5-UO-Nyz"/>
+                            <constraint firstItem="Yo8-RO-alK" firstAttribute="trailing" secondItem="wu4-VT-Lvz" secondAttribute="trailing" constant="40" id="ZdO-9T-eLz"/>
                             <constraint firstItem="5eQ-rf-KOR" firstAttribute="centerX" secondItem="Yo8-RO-alK" secondAttribute="centerX" id="aQI-S4-2y5"/>
                             <constraint firstItem="r1Y-Pp-g03" firstAttribute="top" secondItem="Yo8-RO-alK" secondAttribute="top" id="n4j-Lw-XMb"/>
                             <constraint firstItem="Yo8-RO-alK" firstAttribute="trailing" secondItem="fre-8z-0zc" secondAttribute="trailing" id="utw-DI-x05"/>
@@ -337,6 +346,7 @@
                     <connections>
                         <outlet property="categoriesCollectionView" destination="r1Y-Pp-g03" id="HxI-z6-E4T"/>
                         <outlet property="categoriesLoadingIndicator" destination="no0-ac-kzo" id="1W4-BH-LnJ"/>
+                        <outlet property="emptyProductListMessage" destination="wu4-VT-Lvz" id="QGg-Ry-Qeg"/>
                         <outlet property="productsCollectionView" destination="OIh-7Y-x07" id="Vpl-Dz-A0W"/>
                         <outlet property="productsLoadingIndicator" destination="5eQ-rf-KOR" id="fsE-rE-wrl"/>
                         <segue destination="yyN-I1-8P4" kind="show" identifier="SegueToProductDetailVC" id="ILA-6o-xVB"/>

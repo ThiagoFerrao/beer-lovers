@@ -56,6 +56,7 @@ extension ProductListPresenter: ProductListModuleInterface {
     }
     
     func categoryWasSelectedWithID(_ categoryID: String?) {
+        userInterface?.hidesEmptyProductListMessage()
         userInterface?.cleanCurrentProductList()
         userInterface?.showsProductsLoading()
         interactorInput?.fetchPointOfContactProductList(pointOfContactID: pointOfContactID, categoryID: categoryID)
@@ -87,6 +88,7 @@ extension ProductListPresenter: ProductListInteractorOutput {
     
     func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
         userInterface?.hidesProductsLoading()
+        userInterface?.hidesEmptyProductListMessage()
         userInterface?.updateProductsCollectionView(productList: productList)
     }
     
@@ -97,6 +99,12 @@ extension ProductListPresenter: ProductListInteractorOutput {
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
         userInterface?.hidesProductsLoading()
+        userInterface?.hidesEmptyProductListMessage()
         userInterface?.showAlert(alertController)
+    }
+    
+    func emptyProductList() {
+        userInterface?.hidesProductsLoading()
+        userInterface?.showEmptyProductListMessage()
     }
 }

@@ -19,4 +19,6 @@ protocol ProductListViewInterface {
     func cleanCurrentProductList()
     func showsProductDetailScreenWithProduct(_ product: PocCategorySearchQuery.Data.Poc.Product.ProductVariant?)
     func showAlert(_ alertController: UIAlertController)
+    func showEmptyProductListMessage()
+    func hidesEmptyProductListMessage()
 }

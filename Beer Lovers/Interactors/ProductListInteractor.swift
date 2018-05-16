@@ -48,7 +48,7 @@ extension ProductListInteractor: ProductListInteractorInput {
             (result) in
             
             guard let products = result.products, !products.isEmpty, let productVariants = products[0]?.productVariants, !productVariants.isEmpty else {
-                self.interactorOutput?.errorWhileFetchingProductList()
+                self.interactorOutput?.emptyProductList()
                 return
             }
             
