@@ -57,6 +57,11 @@ class ProductListViewController: UIViewController {
         
         categoryCell.isCellSelected = index == selectedCategoryIndex
     }
+    
+    private func selectFirstCategory() {
+        eventHandler?.newCategoryWasSelectedWithIndex(0)
+        eventHandler?.categoryWasSelectedWithID(categoriesList[0]?.id)
+    }
 }
 
 
@@ -70,6 +75,7 @@ extension ProductListViewController: ProductListViewInterface {
     func updateCategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
         self.categoriesList = productsCategories
         categoriesCollectionView.reloadData()
+        selectFirstCategory()
     }
     
     func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
@@ -157,6 +163,10 @@ extension ProductListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView {
         case categoriesCollectionView:
+            guard indexPath.row != selectedCategoryIndex else {
+                return
+            }
+            
             eventHandler?.newCategoryWasSelectedWithIndex(indexPath.row)
             eventHandler?.categoryWasSelectedWithID(categoriesList[indexPath.row]?.id)
             return
