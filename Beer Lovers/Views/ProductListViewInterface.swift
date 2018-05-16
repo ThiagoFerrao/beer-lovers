@@ -7,5 +7,6 @@
 
 protocol ProductListViewInterface {
     func setupViewCotrollerTitle(_ title: String)
-    func updatecategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?])
+    func updateCategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?])
+    func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product?])
 }

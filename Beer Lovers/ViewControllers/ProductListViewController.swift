@@ -16,6 +16,7 @@ class ProductListViewController: UIViewController {
     var eventHandler        : ProductListModuleInterface?
     
     var productsCategories  = [AllCategoriesSearchQuery.Data.AllCategory?]()
+    var productsList        = [PocCategorySearchQuery.Data.Poc.Product?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,14 @@ extension ProductListViewController: ProductListViewInterface {
         self.title = title
     }
     
-    func updatecategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
+    func updateCategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
         self.productsCategories = productsCategories
         categoriesCollectionView.reloadData()
+    }
+    
+    func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product?]) {
+        self.productsList = productList
+        productsCollectionView.reloadData()
     }
 }
 
@@ -79,5 +85,17 @@ extension ProductListViewController: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegate
 
 extension ProductListViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case categoriesCollectionView:
+            eventHandler?.categoryWasSelectedWithID(productsCategories[indexPath.row]?.id)
+            return
+            
+        case productsCollectionView:
+            return
+            
+        default:
+            return
+        }
+    }
 }

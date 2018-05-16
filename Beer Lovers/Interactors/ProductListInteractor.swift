@@ -37,4 +37,25 @@ extension ProductListInteractor: ProductListInteractorInput {
             self.interactorOutput?.errorWhileFetchingProductsCategories()
         }
     }
+    
+    func fetchPointOfContactProductList(pointOfContactID: String?, categoryID: String?) {
+        guard let pointOfContactID = pointOfContactID, let categoryString = categoryID, let categoryID = Int(categoryString) else {
+            self.interactorOutput?.errorWhileFetchingProductList()
+            return
+        }
+        
+        PointOfContactService.shared.getProductListFromPointOfContact(pointOfContactID: pointOfContactID, productCategoryID: categoryID, success: {
+            (result) in
+            
+            guard let results = result.products, !results.isEmpty else {
+                self.interactorOutput?.errorWhileFetchingProductList()
+                return
+            }
+            
+            self.interactorOutput?.foundProductList(results)
+            
+        }) { (error) in
+            self.interactorOutput?.errorWhileFetchingProductList()
+        }
+    }
 }

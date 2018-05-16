@@ -7,9 +7,12 @@
 
 protocol ProductListInteractorInput {
     func fetchAllProductsCategories()
+    func fetchPointOfContactProductList(pointOfContactID: String?, categoryID: String?)
 }
 
 protocol ProductListInteractorOutput {
     func foundProductsCategories(_ productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?])
     func errorWhileFetchingProductsCategories()
+    func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product?])
+    func errorWhileFetchingProductList()
 }

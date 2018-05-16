@@ -12,6 +12,8 @@ class ProductListPresenter: NSObject {
     var userInterface   : ProductListViewInterface?
     var interactorInput : ProductListInteractorInput?
     
+    var pointOfContactID: String?
+    
     init(userInterface: ProductListViewInterface) {
         super.init()
         
@@ -40,10 +42,16 @@ class ProductListPresenter: NSObject {
 
 extension ProductListPresenter: ProductListModuleInterface {
     func viewDidLoadWithPointOfContact(_ pointOfContact: PocSearchMethodQuery.Data.PocSearch?) {
+        pointOfContactID = pointOfContact?.id
+        
         let fullAddress = getPointOfContactFullAddress(pocAddress: pointOfContact?.address)
         userInterface?.setupViewCotrollerTitle(fullAddress)
         
         interactorInput?.fetchAllProductsCategories()
+    }
+    
+    func categoryWasSelectedWithID(_ categoryID: String?) {
+        interactorInput?.fetchPointOfContactProductList(pointOfContactID: pointOfContactID, categoryID: categoryID)
     }
 }
 
@@ -52,10 +60,18 @@ extension ProductListPresenter: ProductListModuleInterface {
 
 extension ProductListPresenter: ProductListInteractorOutput {
     func foundProductsCategories(_ productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
-        userInterface?.updatecategoriesCollectionView(productsCategories: productsCategories)
+        userInterface?.updateCategoriesCollectionView(productsCategories: productsCategories)
     }
     
     func errorWhileFetchingProductsCategories() {
+        // TODO
+    }
+    
+    func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product?]) {
+        userInterface?.updateProductsCollectionView(productList: productList)
+    }
+    
+    func errorWhileFetchingProductList() {
         // TODO
     }
 }
