@@ -1,5 +1,4 @@
 # Beer Lovers
----
 ### How to Execute
 * Open the aplication folder and execute `pod install`, in your terminal.
 * Open the `Beer Lovers.xcworkspace` file with you XCode and run the project.
