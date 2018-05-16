@@ -67,7 +67,7 @@ extension ProductListPresenter: ProductListInteractorOutput {
         // TODO
     }
     
-    func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product?]) {
+    func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
         userInterface?.updateProductsCollectionView(productList: productList)
     }
     

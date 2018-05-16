@@ -16,7 +16,7 @@ class ProductListViewController: UIViewController {
     var eventHandler        : ProductListModuleInterface?
     
     var productsCategories  = [AllCategoriesSearchQuery.Data.AllCategory?]()
-    var productsList        = [PocCategorySearchQuery.Data.Poc.Product?]()
+    var productsList        = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ extension ProductListViewController: ProductListViewInterface {
         categoriesCollectionView.reloadData()
     }
     
-    func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product?]) {
+    func updateProductsCollectionView(productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
         self.productsList = productList
         productsCollectionView.reloadData()
     }
@@ -55,7 +55,7 @@ extension ProductListViewController: UICollectionViewDataSource {
             return productsCategories.count
             
         case productsCollectionView:
-            return 0
+            return productsList.count
             
         default:
             return 0
@@ -73,6 +73,8 @@ extension ProductListViewController: UICollectionViewDataSource {
             
         case productsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.PRODUCT_CELL, for: indexPath) as! ProductCell
+            cell.productInfo = productsList[indexPath.row]
+            
             return cell
             
         default:

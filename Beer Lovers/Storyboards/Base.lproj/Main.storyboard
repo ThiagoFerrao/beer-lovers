@@ -288,9 +288,9 @@
                                         </constraints>
                                         <size key="customSize" width="140" height="235"/>
                                         <connections>
-                                            <outlet property="productDescription" destination="a25-zv-bZd" id="3OS-qb-QRg"/>
                                             <outlet property="productImage" destination="6eA-wP-ttf" id="ydr-7j-hqx"/>
-                                            <outlet property="productPrice" destination="ldu-ID-h7m" id="WCZ-jo-07f"/>
+                                            <outlet property="productPrice" destination="a25-zv-bZd" id="3OS-qb-QRg"/>
+                                            <outlet property="productTitle" destination="ldu-ID-h7m" id="WCZ-jo-07f"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -47,12 +47,12 @@ extension ProductListInteractor: ProductListInteractorInput {
         PointOfContactService.shared.getProductListFromPointOfContact(pointOfContactID: pointOfContactID, productCategoryID: categoryID, success: {
             (result) in
             
-            guard let results = result.products, !results.isEmpty else {
+            guard let products = result.products, !products.isEmpty, let productVariants = products[0]?.productVariants, !productVariants.isEmpty else {
                 self.interactorOutput?.errorWhileFetchingProductList()
                 return
             }
             
-            self.interactorOutput?.foundProductList(results)
+            self.interactorOutput?.foundProductList(productVariants)
             
         }) { (error) in
             self.interactorOutput?.errorWhileFetchingProductList()
