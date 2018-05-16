@@ -17,6 +17,9 @@
 		AF033B1720AB8F1000464059 /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1620AB8F1000464059 /* ProductListInteractorIO.swift */; };
 		AF033B1920AB8F3F00464059 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1820AB8F3F00464059 /* ProductListInteractor.swift */; };
 		AF033B1B20ABA75400464059 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1A20ABA75400464059 /* Colors.swift */; };
+		AF033B1D20ABE0E600464059 /* ProductDetailViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1C20ABE0E600464059 /* ProductDetailViewInterface.swift */; };
+		AF033B1F20ABE10E00464059 /* ProductDetailModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B1E20ABE10E00464059 /* ProductDetailModuleInterface.swift */; };
+		AF033B2120ABE13300464059 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF033B2020ABE13300464059 /* ProductDetailPresenter.swift */; };
 		AF3F77B020AAD87D00EF5EE9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AF3F77AF20AAD87D00EF5EE9 /* schema.json */; };
 		AF3F77B220AAD88600EF5EE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B120AAD88600EF5EE9 /* API.swift */; };
 		AF3F77B720AADE7B00EF5EE9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */; };
@@ -79,6 +82,9 @@
 		AF033B1620AB8F1000464059 /* ProductListInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractorIO.swift; sourceTree = "<group>"; };
 		AF033B1820AB8F3F00464059 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
 		AF033B1A20ABA75400464059 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AF033B1C20ABE0E600464059 /* ProductDetailViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewInterface.swift; sourceTree = "<group>"; };
+		AF033B1E20ABE10E00464059 /* ProductDetailModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModuleInterface.swift; sourceTree = "<group>"; };
+		AF033B2020ABE13300464059 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		AF3F77AF20AAD87D00EF5EE9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "Beer Lovers/schema.json"; sourceTree = SOURCE_ROOT; };
 		AF3F77B120AAD88600EF5EE9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Beer Lovers/API.swift"; sourceTree = SOURCE_ROOT; };
 		AF3F77B620AADE7B00EF5EE9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 			children = (
 				AF7FA85920AA81F4007651F8 /* HomePresenter.swift */,
 				AF033B1420AB8EBD00464059 /* ProductListPresenter.swift */,
+				AF033B2020ABE13300464059 /* ProductDetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -290,6 +297,7 @@
 			children = (
 				AF7FA85C20AA8251007651F8 /* HomeViewInterface.swift */,
 				AF033B1020AB8E7C00464059 /* ProductListViewInterface.swift */,
+				AF033B1C20ABE0E600464059 /* ProductDetailViewInterface.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 			children = (
 				AF7FA85F20AA828E007651F8 /* HomeModuleInterface.swift */,
 				AF033B1220AB8E9F00464059 /* ProductListModuleInterface.swift */,
+				AF033B1E20ABE10E00464059 /* ProductDetailModuleInterface.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -627,17 +636,20 @@
 				AF7FA86C20AAABFA007651F8 /* HomeTableTypeEnum.swift in Sources */,
 				AF7FA86520AA8CB7007651F8 /* HomeInteractor.swift in Sources */,
 				AF033B1520AB8EBD00464059 /* ProductListPresenter.swift in Sources */,
+				AF033B2120ABE13300464059 /* ProductDetailPresenter.swift in Sources */,
 				AF7FA85D20AA8251007651F8 /* HomeViewInterface.swift in Sources */,
 				AF7FA86020AA828E007651F8 /* HomeModuleInterface.swift in Sources */,
 				AF7FA85520AA78D3007651F8 /* CellIdentifiers.swift in Sources */,
 				AF7FA86920AA9F79007651F8 /* SegueIdentifiers.swift in Sources */,
 				AF3F77BF20AAE97100EF5EE9 /* BaseService.swift in Sources */,
+				AF033B1D20ABE0E600464059 /* ProductDetailViewInterface.swift in Sources */,
 				AF7FA85720AA7E4A007651F8 /* APIKeys.swift in Sources */,
 				AF7FA84F20AA6D81007651F8 /* ProductDetailViewController.swift in Sources */,
 				AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */,
 				AF7FA84D20AA6D34007651F8 /* ProductListViewController.swift in Sources */,
 				AF7FA85220AA773A007651F8 /* AddressResultCell.swift in Sources */,
 				AF033B1720AB8F1000464059 /* ProductListInteractorIO.swift in Sources */,
+				AF033B1F20ABE10E00464059 /* ProductDetailModuleInterface.swift in Sources */,
 				AF033B1B20ABA75400464059 /* Colors.swift in Sources */,
 				AF033B1120AB8E7C00464059 /* ProductListViewInterface.swift in Sources */,
 				AF488B7D20AA639A0024B39C /* AppDelegate.swift in Sources */,
@@ -826,7 +838,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -843,7 +858,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Beer Lovers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.beer-lovers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -859,7 +877,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -876,7 +898,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -891,7 +917,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -906,7 +936,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Beer LoversUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zxventures-code-challenge.Beer-LoversUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
