@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductCell: UICollectionViewCell {
     
@@ -15,8 +16,7 @@ class ProductCell: UICollectionViewCell {
     
     var productInfo: PocCategorySearchQuery.Data.Poc.Product.ProductVariant? {
         didSet {
-//            productImage.image = productInfo?.imageUrl
-            
+            setupProductImage(productInfo?.imageUrl)
             productTitle.text = productInfo?.title
             setupProductPrice(productInfo?.price)
         }
@@ -24,6 +24,20 @@ class ProductCell: UICollectionViewCell {
     
     
     // MARK: Private Methods
+    
+    private func setupProductImage(_ imageUrl: String?) {
+        guard let urlString = imageUrl, let url = URL(string: urlString) else {
+            productImage.image = UIImage(named: "icon_app")
+            return
+        }
+        
+        productImage.kf.setImage(with: url
+            , placeholder: UIImage(named: "icon_app")
+            , options: [
+                .transition(.fade(1)),
+                .processor(DefaultImageProcessor.default)
+            ], progressBlock: nil, completionHandler: nil)
+    }
     
     private func setupProductPrice(_ price: Double?) {
         guard let price = price else {
