@@ -60,6 +60,10 @@ extension ProductListPresenter: ProductListModuleInterface {
         userInterface?.showsProductsLoading()
         interactorInput?.fetchPointOfContactProductList(pointOfContactID: pointOfContactID, categoryID: categoryID)
     }
+    
+    func productWasSelected(product: PocCategorySearchQuery.Data.Poc.Product.ProductVariant?) {
+        userInterface?.showsProductDetailScreenWithProduct(product)
+    }
 }
 
 

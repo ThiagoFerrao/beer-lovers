@@ -30,7 +30,22 @@ class ProductListViewController: UIViewController {
     }
     
     
-    // MARK: Private Methods:
+    // MARK: SEGUE
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard (segue.identifier == SEGUE_IDENTIFIERS.PRODUCT.TO_PRODUCT_DETAIL) else {
+            print("[ProductListViewController] Unknown segue identifier was triggered")
+            return
+        }
+        
+        let product = sender as! PocCategorySearchQuery.Data.Poc.Product.ProductVariant?
+        let productDetailVC = segue.destination as! ProductDetailViewController
+        
+        productDetailVC.product = product
+    }
+    
+    
+    // MARK: Private Methods
     
     private func updateCategoryCellAtIndex(_ index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
@@ -90,6 +105,10 @@ extension ProductListViewController: ProductListViewInterface {
         productsList = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
         productsCollectionView.reloadData()
     }
+    
+    func showsProductDetailScreenWithProduct(_ product: PocCategorySearchQuery.Data.Poc.Product.ProductVariant?) {
+        performSegue(withIdentifier: SEGUE_IDENTIFIERS.PRODUCT.TO_PRODUCT_DETAIL, sender: product)
+    }
 }
 
 
@@ -143,6 +162,7 @@ extension ProductListViewController: UICollectionViewDelegate {
             return
             
         case productsCollectionView:
+            eventHandler?.productWasSelected(product: productsList[indexPath.row])
             return
             
         default:

@@ -15,4 +15,5 @@ protocol ProductListViewInterface {
     func hidesProductsLoading()
     func updateSelectedIndexTo(_ newSelectedIndex: Int)
     func cleanCurrentProductList()
+    func showsProductDetailScreenWithProduct(_ product: PocCategorySearchQuery.Data.Poc.Product.ProductVariant?)
 }

@@ -346,10 +346,10 @@
             </objects>
             <point key="canvasLocation" x="112.8" y="5.8470764617691158"/>
         </scene>
-        <!--Product Detail-->
+        <!--Product Detail View Controller-->
         <scene sceneID="gDc-rz-bre">
             <objects>
-                <viewController title="Product Detail" id="yyN-I1-8P4" customClass="ProductDetailViewController" customModule="Beer_Lovers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yyN-I1-8P4" customClass="ProductDetailViewController" customModule="Beer_Lovers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Luz-mY-LUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
