@@ -51,7 +51,10 @@ class ProductListViewController: UIViewController {
         let indexPath = IndexPath(row: index, section: 0)
         
         guard let categoryCell = categoriesCollectionView.cellForItem(at: indexPath) as? CategoryCell else {
-            categoriesCollectionView.reloadItems(at: [indexPath])
+            // fixes a bug in the category collection view that more than one cell's label is coloured as a selected cell,
+            // but sometimes crashes the app, probably beacuse the cell doesnt exist while the item is forced to reload
+            
+            // categoriesCollectionView.reloadItems(at: [indexPath])
             return
         }
         
