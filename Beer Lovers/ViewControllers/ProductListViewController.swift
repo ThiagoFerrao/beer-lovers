@@ -28,6 +28,20 @@ class ProductListViewController: UIViewController {
         eventHandler = ProductListPresenter(userInterface: self)
         eventHandler?.viewDidLoadWithPointOfContact(pointOfContact)
     }
+    
+    
+    // MARK: Private Methods:
+    
+    private func updateCategoryCellAtIndex(_ index: Int) {
+        let indexPath = IndexPath(row: index, section: 0)
+        
+        guard let categoryCell = categoriesCollectionView.cellForItem(at: indexPath) as? CategoryCell else {
+            categoriesCollectionView.reloadItems(at: [indexPath])
+            return
+        }
+        
+        categoryCell.isCellSelected = index == selectedCategoryIndex
+    }
 }
 
 
@@ -68,20 +82,8 @@ extension ProductListViewController: ProductListViewInterface {
         let oldSelectedIndex = selectedCategoryIndex
         selectedCategoryIndex = newSelectedIndex
         
-        let newSelectedIndexPath = IndexPath(row: newSelectedIndex, section: 0)
-        let oldSelectedIndexPath = IndexPath(row: oldSelectedIndex, section: 0)
-        
-        if let newSelectedCategoryCell = categoriesCollectionView.cellForItem(at: newSelectedIndexPath) as? CategoryCell {
-            newSelectedCategoryCell.isCellSelected = true
-        } else {
-            categoriesCollectionView.reloadItems(at: [newSelectedIndexPath])
-        }
-        
-        if let oldSelectedCategoryCell = categoriesCollectionView.cellForItem(at: oldSelectedIndexPath) as? CategoryCell {
-            oldSelectedCategoryCell.isCellSelected = false
-        } else {
-            categoriesCollectionView.reloadItems(at: [oldSelectedIndexPath])
-        }
+        updateCategoryCellAtIndex(oldSelectedIndex)
+        updateCategoryCellAtIndex(newSelectedIndex)
     }
 }
 
