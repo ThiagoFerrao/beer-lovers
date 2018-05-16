@@ -19,7 +19,7 @@ class ProductListViewController: UIViewController {
     var pointOfContact          : PocSearchMethodQuery.Data.PocSearch?
     var eventHandler            : ProductListModuleInterface?
     
-    var productsCategories      = [AllCategoriesSearchQuery.Data.AllCategory?]()
+    var categoriesList          = [AllCategoriesSearchQuery.Data.AllCategory?]()
     var productsList            = [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]()
     
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ extension ProductListViewController: ProductListViewInterface {
     }
     
     func updateCategoriesCollectionView(productsCategories: [AllCategoriesSearchQuery.Data.AllCategory?]) {
-        self.productsCategories = productsCategories
+        self.categoriesList = productsCategories
         categoriesCollectionView.reloadData()
     }
     
@@ -99,7 +99,7 @@ extension ProductListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case categoriesCollectionView:
-            return productsCategories.count
+            return categoriesList.count
             
         case productsCollectionView:
             return productsList.count
@@ -113,8 +113,8 @@ extension ProductListViewController: UICollectionViewDataSource {
         switch collectionView {
         case categoriesCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIERS.PRODUCT_LIST.CATEGORY_CELL, for: indexPath) as! CategoryCell
-            cell.productCategory = productsCategories[indexPath.row]
-            cell.isLastCell = productsCategories.count == indexPath.row + 1
+            cell.productCategory = categoriesList[indexPath.row]
+            cell.isLastCell = categoriesList.count == indexPath.row + 1
             cell.isCellSelected = indexPath.row == selectedCategoryIndex
             
             return cell
@@ -139,7 +139,7 @@ extension ProductListViewController: UICollectionViewDelegate {
         switch collectionView {
         case categoriesCollectionView:
             eventHandler?.newCategoryWasSelectedWithIndex(indexPath.row)
-            eventHandler?.categoryWasSelectedWithID(productsCategories[indexPath.row]?.id)
+            eventHandler?.categoryWasSelectedWithID(categoriesList[indexPath.row]?.id)
             return
             
         case productsCollectionView:
