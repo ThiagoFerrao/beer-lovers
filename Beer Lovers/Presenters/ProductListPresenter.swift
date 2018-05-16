@@ -76,8 +76,13 @@ extension ProductListPresenter: ProductListInteractorOutput {
     }
     
     func errorWhileFetchingProductsCategories() {
+        let alertController = UIAlertController(title: "And Error Occurred"
+            , message: "Unable to get the products category list.\nTry again later :("
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
         userInterface?.hidesCategoriesLoading()
-        // TODO
+        userInterface?.showAlert(alertController)
     }
     
     func foundProductList(_ productList: [PocCategorySearchQuery.Data.Poc.Product.ProductVariant?]) {
@@ -86,7 +91,12 @@ extension ProductListPresenter: ProductListInteractorOutput {
     }
     
     func errorWhileFetchingProductList() {
+        let alertController = UIAlertController(title: "And Error Occurred"
+            , message: "Unable to get the products list.\nTry again later :("
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
         userInterface?.hidesProductsLoading()
-        // TODO
+        userInterface?.showAlert(alertController)
     }
 }

@@ -118,6 +118,10 @@ extension ProductListViewController: ProductListViewInterface {
     func showsProductDetailScreenWithProduct(_ product: PocCategorySearchQuery.Data.Poc.Product.ProductVariant?) {
         performSegue(withIdentifier: SEGUE_IDENTIFIERS.PRODUCT.TO_PRODUCT_DETAIL, sender: product)
     }
+    
+    func showAlert(_ alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 
