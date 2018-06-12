@@ -20,11 +20,11 @@ class DateUtilTests: XCTestCase {
         dateComponents.hour = 8
         dateComponents.minute = 34
         
-        let currentCalendarDate = Calendar.current
-        let preDefinedDate = currentCalendarDate.date(from: dateComponents)
+        let currentCalendar = Calendar.current
+        let definedDate = currentCalendar.date(from: dateComponents)
         
-        let preDefinedDateInString = DateUtil.shared.getStringFromDate(date: preDefinedDate!)
+        let definedDateString = DateUtil.shared.getStringFromDate(date: definedDate!)
         
-        XCTAssertEqual(preDefinedDateInString, dateString)
+        XCTAssertEqual(definedDateString, dateString)
     }
 }
