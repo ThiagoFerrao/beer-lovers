@@ -10,7 +10,7 @@ import XCTest
 
 class DateUtilTests: XCTestCase {
     
-    func testgetStringFromDate() {
+    func testGetStringFromDate() {
         let dateString = "1980-07-11T08:34:00.000-03:00"
         
         var dateComponents = DateComponents()
