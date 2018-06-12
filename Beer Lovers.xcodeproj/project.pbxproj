@@ -49,6 +49,7 @@
 		AF7FA87B20AAD2B2007651F8 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA87A20AAD2B2007651F8 /* URLs.swift */; };
 		AF7FA88120AAD671007651F8 /* PointOfContactProducts.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88020AAD671007651F8 /* PointOfContactProducts.graphql */; };
 		AF7FA88320AAD6E6007651F8 /* ProductsCategories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = AF7FA88220AAD6E6007651F8 /* ProductsCategories.graphql */; };
+		AFF5E8D820CF771E003514B0 /* DateUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF5E8D720CF771E003514B0 /* DateUtilTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		AF7FA87A20AAD2B2007651F8 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		AF7FA88020AAD671007651F8 /* PointOfContactProducts.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PointOfContactProducts.graphql; sourceTree = "<group>"; };
 		AF7FA88220AAD6E6007651F8 /* ProductsCategories.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProductsCategories.graphql; sourceTree = "<group>"; };
+		AFF5E8D720CF771E003514B0 /* DateUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilTests.swift; sourceTree = "<group>"; };
 		FDA1E21E94502144265A699A /* Pods-Beer Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Lovers/Pods-Beer Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 		AF488B9020AA639B0024B39C /* Beer LoversTests */ = {
 			isa = PBXGroup;
 			children = (
+				AFF5E8D620CF76AE003514B0 /* Utils */,
 				AF488B9120AA639B0024B39C /* Beer_LoversTests.swift */,
 				AF488B9320AA639B0024B39C /* Info.plist */,
 			);
@@ -358,6 +361,14 @@
 				AF3F77AF20AAD87D00EF5EE9 /* schema.json */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		AFF5E8D620CF76AE003514B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFF5E8D720CF771E003514B0 /* DateUtilTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF488B9220AA639B0024B39C /* Beer_LoversTests.swift in Sources */,
+				AFF5E8D820CF771E003514B0 /* DateUtilTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
